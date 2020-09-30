@@ -3,6 +3,7 @@
  $user_id = $_SESSION['user_id'];
  $user = $getFromU->userData($user_id);
  $getFromU-> create('users', array('username' => 'zain', 'email'=> 'zain@school.edu', 'password' => md5('zainboii')));
+ 
 
 ?>
 <!DOCTYPE HTML> 
