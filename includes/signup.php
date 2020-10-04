@@ -2,6 +2,7 @@
 	include '../core/init.php';
 	$user_id = $_SESSION['user_id'];
 	$user    = $getFromU->userData($user_id);
+	
 
 	if(isset($_GET['step']) === true && empty($_GET['step'])=== false){
 
@@ -22,7 +23,7 @@
 			}
 		}
 	?>
-		<!doctype html>
+	 <!doctype html>
 <html>
 	<head>
 		<title>twitter</title>
@@ -75,7 +76,7 @@
   		<?php if($_GET['step'] == '2'){?>	
 	<div class='lets-wrapper'>
 		<div class='step-letsgo'>
-			<h2>We're glad you're here, Change this</h2>
+			<h2>We're glad you're here, <?php echo $user->screenName;?> </h2>
 			<p>Tweety is a constantly updating stream of the coolest, most important news, media, sports, TV, conversations and more--all tailored just for you.</p>
 			<br/>
 			<p>

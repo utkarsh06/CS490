@@ -3,7 +3,7 @@
  $user_id = $_SESSION['user_id'];
  $user = $getFromU->userData($user_id);
  $getFromU-> create('users', array('username' => 'zain', 'email'=> 'zain@school.edu', 'password' => md5('zainboii')));
- 
+
 
 ?>
 <!DOCTYPE HTML> 
@@ -85,7 +85,7 @@
 					</div><!--  in b box end-->
 					<div class="info-body-name">
 						<div class="in-b-name">
-							<div><a href="<?php echo $user-> username;?>"><?php echo $user->screenName;?></a></div>
+							<div><a href="<?php echo $user->username;?>"><?php echo $user->screenName;?></a></div>
 							<span><small><a href="<?php echo $user->username;?>"><?php echo $user->username;?></a></small></span>
 						</div><!-- in b name end-->
 					</div><!-- info body name end-->
@@ -105,7 +105,7 @@
 								FOLLOWING
 							</div>
 							<div class="num-body">
-								<span class="count-following"><?php echo $user->followers;?></span>
+								<span class="count-following"><?php echo $user->following;?></span>
 							</div>
 						</div>
 						<div class="num-box">

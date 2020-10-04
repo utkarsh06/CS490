@@ -1,10 +1,10 @@
 <?php
  if(isset($_POST['login']) && !empty($_POST['login'])){
-	$email = $_POST['email'];
+	$email    = $_POST['email'];
 	$password = $_POST['password'];
 
 	if(!empty($email) or !empty($password)){
-		$email = $getFromU->checkInput($email);
+		$email    = $getFromU->checkInput($email);
 		$password = $getFromU->checkInput($password);
 
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
