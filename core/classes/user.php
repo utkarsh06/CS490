@@ -15,7 +15,7 @@
 
    public function login($email, $password){
    	$stmt = $this->pdo->prepare("SELECT `user_id` FROM `users` WHERE `email` = :email AND `password` = :password ");
-   	$stmt->bindParam(":user_id", $user_id, PDO::PARAM_STR);
+   	$stmt->bindParam(":email", $email, PDO::PARAM_STR);
    	$stmt->bindParam(":password", $password, PDO::PARAM_STR);
    	$stmt->execute();
 
@@ -81,7 +81,7 @@
    	 	}
    	 	$i++;
    	 }
-$sql = "UPDATE {$table} SET {$columns} WHERE `user_id` = {$user_id}";
+     $sql = "UPDATE {$table} SET {$columns} WHERE `user_id` = {$user_id}";
 
    	 if($stmt = $this->pdo->prepare($sql)){
    	 	foreach ($fields as $key => $value) {
@@ -118,5 +118,12 @@ $sql = "UPDATE {$table} SET {$columns} WHERE `user_id` = {$user_id}";
    	}
    }
 
+   public function userIdByUsername($username){
+   	$stmt = $this->pdo->prepare("SELECT `user_id` FROM `users` WHERE `username` = :username");
+   	$stmt ->bindParam(":username", $username, PDO::PARAM_STR);
+   	$stmt->execute();
+   	$user = $stmt->fetch(PDO::FETCH_OBJ);
+   	return $user->user_id;
+   }
  }
 ?>

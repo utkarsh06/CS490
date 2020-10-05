@@ -1,8 +1,7 @@
 <?php
  include 'core/init.php';
  $user_id = $_SESSION['user_id'];
- $user = $getFromU->userData($user_id);
- $getFromU-> create('users', array('username' => 'zain', 'email'=> 'zain@school.edu', 'password' => md5('zainboii')));
+ $user    = $getFromU->userData($user_id);
 
 
 ?>
@@ -94,7 +93,7 @@
 					<div class="number-wrapper">
 						<div class="num-box">
 							<div class="num-head">
-								TWEETS
+								POSTS
 							</div>
 							<div class="num-body">
 								10

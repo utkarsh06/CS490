@@ -1,5 +1,8 @@
 <?php
    include 'core/init.php';
+   if(isset($_SESSION['user_id'])){
+   	 header('Location: home.php');
+   }
 ?>
 <!--
    This template created by Meralesson.com 
@@ -28,14 +31,14 @@
 			
 			<div class="nav-left">
 				<ul>
-					<li><i class="fa fa-twitter" aria-hidden="true"></i><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
+					<li><i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></li>
+					<li><i class="fa fa-question" aria-hidden="true"></i><a href="#">About</a></li>
 				</ul>
 			</div><!-- nav left ends-->
 
 			<div class="nav-right">
 				<ul>
-					<li><a href="#">Language</a></li>
+					<li><i class="fa fa-language" aria-hidden="true"></i><a href="#">Language</a></li>
 				</ul>
 			</div><!-- nav right ends-->
 
@@ -51,7 +54,7 @@
 	<div class="main-container">
 		<!-- content left-->
 		<div class="content-left">
-			<h1>Welcome to Buzz.</h1>
+			<h1>Welcome to Buzz!</h1>
 			<br/>
 			<p>A place to connect with your friends — and Get updates from the people you love, And get the updates from the world and things that interest you.</p>
 		</div><!-- content left ends -->	
