@@ -2,7 +2,9 @@
  include 'core/init.php';
  $user_id = $_SESSION['user_id'];
  $user    = $getFromU->userData($user_id);
-
+ if($getFromU->loggedIn() === false){
+ 	header('Location: index.php');
+ }
 
 ?>
 <!DOCTYPE HTML> 
@@ -62,6 +64,8 @@
 </div><!-- nav container ends -->
 
 </div><!-- header wrapper end -->
+
+<script type="text/javascript" src="assets/js/search.js"></script>
 
 <!---Inner wrapper-->
 <div class="inner-wrapper">
