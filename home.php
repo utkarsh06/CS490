@@ -53,7 +53,7 @@
 					</div>
 				</div>
 				</li>
-				<li><label class="addTweetBtn">Tweet</label></li>
+				<li><label class="addTweetBtn">Post</label></li>
 			</ul>
 		</div><!-- nav right ends-->
 
