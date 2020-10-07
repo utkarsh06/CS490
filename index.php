@@ -56,7 +56,8 @@
 		<div class="content-left">
 			<h1>Welcome to Buzz!</h1>
 			<br/>
-			<p>A place to connect with your friends — and Get updates from the people you love, And get the updates from the world and things that interest you.</p>
+			<p>A place to connect with your friends and to get updates from the people who are close.
+			See what the Buzz is about!</p>
 		</div><!-- content left ends -->	
 
 		<!-- content right ends -->
