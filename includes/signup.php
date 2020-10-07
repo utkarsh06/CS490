@@ -77,7 +77,7 @@
 	<div class='lets-wrapper'>
 		<div class='step-letsgo'>
 			<h2>We're glad you're here, <?php echo $user->screenName;?> </h2>
-			<p>Tweety is a constantly updating stream of the coolest, most important news, media, sports, TV, conversations and more--all tailored just for you.</p>
+			<p>Buzz is a constantly updating stream of the coolest, most important news, media, sports, TV, conversations and more--all tailored just for you.</p>
 			<br/>
 			<p>
 				Tell us about all the stuff you love and we'll help you get set up.

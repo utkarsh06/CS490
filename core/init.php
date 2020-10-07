@@ -9,8 +9,8 @@
  session_start();
 
  $getFromU = new User($pdo);
- $getFromT = new Follow($pdo);
- $getFromF = new Tweet($pdo);
+ $getFromF = new Follow($pdo);
+ $getFromT = new Tweet($pdo);
 
  define("BASE_URL", "http://localhost/twitterclone/");
 ?>
