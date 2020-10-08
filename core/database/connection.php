@@ -1,5 +1,5 @@
 <?php
-   $dsn = 'mysql:host=localhost; dbname=BeeBase' ;
+   $dsn = 'mysql:host=localhost; dbname=tweety' ;
    $user = 'root';
    $pass = '';
 
