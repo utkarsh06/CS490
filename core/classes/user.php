@@ -138,6 +138,7 @@
    	$user = $stmt->fetch(PDO::FETCH_OBJ);
    	return $user->user_id;
    }
+   
    public function uploadImage($file){
    	$filename = basename($file['name']);
    	$fileTmp  = $file['tmp_name'];
@@ -156,7 +157,7 @@
    				return $fileRoot;
    			}else{
    				$GLOBALS['imageError'] === "The file size is too large.";
-   			}
+   			} 
    		}
    	}else{
    		$GLOBALS['imageError'] === "The extension is not allowed";

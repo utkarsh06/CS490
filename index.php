@@ -36,12 +36,12 @@
 				</ul>
 			</div><!-- nav left ends-->
 
-			<div class="nav-right">
+	<!--<div class="nav-right">
 				<ul>
 					<li><i class="fa fa-language" aria-hidden="true"></i><a href="#">Language</a></li>
 				</ul>
 			</div><!-- nav right ends-->
-
+  
 		</div><!-- nav ends -->
 
 	</div><!-- nav container ends -->

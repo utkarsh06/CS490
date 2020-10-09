@@ -26,7 +26,7 @@
 	 <!doctype html>
 <html>
 	<head>
-		<title>twitter</title>
+		<title>buzz</title>
 		<meta charset="UTF-8" />
  		<link rel="stylesheet" href="assets/css/font/css/font-awesome.css"/>
 		<link rel="stylesheet" href="../assets/css/style-complete.css"/>
@@ -76,7 +76,7 @@
   		<?php if($_GET['step'] == '2'){?>	
 	<div class='lets-wrapper'>
 		<div class='step-letsgo'>
-			<h2>We're glad you're here, <?php echo $user->screenName;?> </h2>
+			<h2>Welcome, <?php echo $user->screenName;?> </h2>
 			<p>Buzz is a constantly updating stream of the coolest, most important news, media, sports, TV, conversations and more--all tailored just for you.</p>
 			<br/>
 			<p>

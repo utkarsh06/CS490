@@ -44,7 +44,7 @@
 			<input type="password" name="password" placeholder="Password"/>
 		</li>
 		<li>
-			<input type="submit" name="signup" Value="Signup for Twitter">
+			<input type="submit" name="signup" Value="Register">
 		</li>
 	</ul>
 	<?php
