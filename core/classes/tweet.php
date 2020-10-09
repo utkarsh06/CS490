@@ -1,15 +1,15 @@
 <?php
- class Tweet extends User{
+ class Post extends User{
  
    function __construct($pdo){
    	$this->pdo = $pdo;
    }
-   public function tweets(){
+   public function posts(){
    	$stmt = $this->pdo->prepare("SELECT * FROM `tweets`, `users` WHERE `tweetBy` = `user_id`");
    	$stmt->execute();
-   	$tweets = $stmt->fetchAll(PDO::FETCH_OBJ);
+   	$posts = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-   	foreach($tweets as $tweet){
+   	foreach($posts as $tweet){
    		echo '<div class="all-tweet">
 <div class="t-show-wrap">	
  <div class="t-show-inner">
