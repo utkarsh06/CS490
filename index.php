@@ -4,10 +4,7 @@
    	 header('Location: home.php');
    }
 ?>
-<!--
-   This template created by Meralesson.com 
-   This template only use for educational purpose 
--->
+
 <html>
 	<head>
 		<title>Buzz</title>
