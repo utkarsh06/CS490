@@ -186,7 +186,7 @@
 			
 				<!--Tweet SHOW WRAPPER-->
 				 <div class="tweets">
- 				  	<?php $getFromT->tweets(); ?>
+ 				  	<?php $getFromT->posts(); ?>
  				 </div>
  				<!--TWEETS SHOW WRAPPER-->
 
