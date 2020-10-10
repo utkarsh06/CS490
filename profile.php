@@ -207,7 +207,7 @@
 						<i class="fa fa-camera" aria-hidden="true"></i>
 					</div>
 					<div class="profile-ex-location">
-						<a href="#">0 Photos and videos </a>
+						<a href="#">0 Photos </a>
 					</div>
 				</li>
 			</ul>

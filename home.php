@@ -5,7 +5,7 @@
  if($getFromU->loggedIn() === false){
  	header('Location: index.php');
  }
- if(isset($_POST['tweet'])){
+ if(isset($_POST['post'])){
  	$status = $getFromU->checkInput($_POST['status']);
  	$tweetImage = '';
 
@@ -14,7 +14,7 @@
  			$tweetImage = $getFromU->uploadImage($_FILES['file']);
  		}
  		if(strlen($status) > 140){
- 			$error = "The text of your tweet is too long.";
+ 			$error = "The text of your post is too long.";
  		}
  		$getFromU->create('tweets', array('status'=> $status, 'tweetBy' => $user_id, 'tweetImage'=> $tweetImage, 'postedOn' => date('Y-m-d H:i:s')));
  	}else{
@@ -71,7 +71,7 @@
 					</div>
 				</div>
 				</li>
-				<li><label class="addTweetBtn">Post</label></li>
+				<li><label class="addPostBtn">Post</label></li>
 			</ul>
 		</div><!-- nav right ends-->
 
@@ -149,15 +149,15 @@
 		<div class="in-center">
 			<div class="in-center-wrap">
 				<!--TWEET WRAPPER-->
-				<div class="tweet-wrap">
-					<div class="tweet-inner">
-						 <div class="tweet-h-left">
-						 	<div class="tweet-h-img">
+				<div class="post-wrap">
+					<div class="post-inner">
+						 <div class="post-h-left">
+						 	<div class="post-h-img">
 						 	<!-- PROFILE-IMAGE -->
-						 		<img src="<?php echo $user->profileImage;?>"/>
-						 	</div>
-						 </div>
-						 <div class="tweet-body">
+						 		<img src="<?php echo $user->profileImage;?>"width ="40" height="40"/>
+						 	</div> 
+						 </div>  
+						 <div class="post-body">
 						 <form method="post" enctype="multipart/form-data">
 							<textarea class="status" name="status" placeholder="Type Something here!" rows="4" cols="50"></textarea>
  						 	<div class="hash-box">
@@ -165,18 +165,18 @@
   						 		</ul>
 						 	</div>
  						 </div>
-						 <div class="tweet-footer">
+						 <div class="post-footer">
 						 	<div class="t-fo-left">
 						 		<ul>
 						 			<input type="file" name="file" id="file"/>
 						 			<li><label for="file"><i class="fa fa-camera" aria-hidden="true"></i></label>
-						 			<span class="tweet-error"><?php if(isset($error)){echo $error;}else if(isset($imageError)){echo $imageError;}?></span>
+						 			<span class="post-error"><?php if(isset($error)){echo $error;}else if(isset($imageError)){echo $imageError;}?></span>
 						 			</li>
 						 		</ul>
 						 	</div>
 						 	<div class="t-fo-right">
 						 		<span id="count">140</span>
-						 		<input type="submit" name="tweet" value="Post"/>
+						 		<input type="submit" name="post" value="post"/>
 				 		</form>
 						 	</div>
 						 </div>
@@ -193,7 +193,7 @@
 		    	<div class="loading-div">
 		    		<img id="loader" src="assets/images/loading.svg" style="display: none;"/> 
 		    	</div>
-				<div class="popupTweet"></div>
+				<div class="popupPost"></div>
 				<!--Tweet END WRAPER-->
  			
 			</div><!-- in left wrap-->

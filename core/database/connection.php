@@ -1,6 +1,6 @@
 <?php
-   $servername = 'localhost';
-   $database = 'tweety'; 
+   //$servername = 'localhost';
+   //$database = 'tweety'; 
    $username = 'b253828cee1fe7';
    $password = '86875cb0';
 
