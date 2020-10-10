@@ -9,7 +9,7 @@
    	$stmt->execute();
    	$posts = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-   	foreach($posts as $tweet){
+   	foreach($posts as $post){
    		echo '<div class="all-tweet">
 <div class="t-show-wrap">	
  <div class="t-show-inner">
@@ -23,25 +23,25 @@
 	<div class="t-show-popup">
 		<div class="t-show-head">
 			<div class="t-show-img">
-				<img src="'.$tweet->profileImage.'"/>
+				<img src="'.$post->profileImage.'"/>
 			</div>
 			<div class="t-s-head-content">
 				<div class="t-h-c-name">
-					<span><a href="'.$tweet->username.'">'.$tweet->screenName.'</a></span>
-					<span>@'.$tweet->username.'</span>
-					<span>'.$tweet->postedOn.'</span>
+					<span><a href="'.$post->username.'">'.$post->screenName.'</a></span>
+					<span>@'.$post->username.'</span>
+					<span>'.$post->postedOn.'</span>
 				</div>
 				<div class="t-h-c-dis">
-					'.$tweet->status.'
+					'.$post->status.'
 				</div>
 			</div>
 		</div>';
-		if(!empty($tweet->tweetImage)){
+		if(!empty($post->tweetImage)){
 		echo'<!--tweet show head end-->
 		 <div class="t-show-body">
 		   <div class="t-s-b-inner">
 		    <div class="t-s-b-inner-in">
-		     <img src="'.$tweet->tweetImage.'" class="imagePopup"/>
+		     <img src="'.$post->tweetImage.'" class="imagePopup"/>
 		   </div>
 		  </div>
 		</div>
@@ -51,11 +51,11 @@
 	<div class="t-show-footer">
 		<div class="t-s-f-right">
 			<ul> 
-				<li><button><a href="#"><i class="fa fa-share" aria-hidden="true"></i></a></button></li>	
-				<li><button><a href="#"><i class="fa fa-retweet" aria-hidden="true"></i></a></button></li>
-				<li><button><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></button></li>
+				<li><button><a href="#"><i class="fa fa-reply" aria-hidden="true"></i></a></button></li>	
+				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
+				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
 					<li>
-					<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+					<a href="#" class="more"><i class="fa fa-trash" aria-hidden="true"></i></a>
 					<ul> 
 					  <li><label class="deleteTweet">Delete Tweet</label></li>
 					</ul>

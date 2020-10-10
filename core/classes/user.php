@@ -15,8 +15,8 @@
 
    public function search($search){
    	$stmt = $this->pdo->prepare("SELECT `user_id`,`username`, `screenName`,`profileImage`, `profileCover` FROM `users` WHERE `username` LIKE ? OR `screenName` LIKE ?");
-   	$stmt->bindvalue(1, $search.'%', PDO::PARAM_STR);
-   	$stmt->bindvalue(2, $search.'%', PDO::PARAM_STR);
+   	$stmt->bindValue(1, $search.'%', PDO::PARAM_STR);
+   	$stmt->bindValue(2, $search.'%', PDO::PARAM_STR);
    	$stmt->execute();
    	return $stmt->fetchAll(PDO::FETCH_OBJ);
 
@@ -138,7 +138,7 @@
    	$user = $stmt->fetch(PDO::FETCH_OBJ);
    	return $user->user_id;
    }
-   
+
    public function uploadImage($file){
    	$filename = basename($file['name']);
    	$fileTmp  = $file['tmp_name'];
