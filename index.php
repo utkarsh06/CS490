@@ -15,7 +15,7 @@
 	<!--Helvetica Neue-->
 <body>
 <div class="front-img">
-	<img src="assets/images/background.jpg"></img>
+	<img src="assets/images/defaultCoverImage.png"></img>
 </div>	
 
 <div class="wrapper">
@@ -29,7 +29,7 @@
 			<div class="nav-left">
 				<ul>
 					<li><i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></li>
-					<li><i class="fa fa-question" aria-hidden="true"></i><a href="#">About</a></li>
+				   <!-- <li><i class="fa fa-question" aria-hidden="true"></i><a href="#">About</a></li> -->
 				</ul>
 			</div><!-- nav left ends-->
 
