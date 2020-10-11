@@ -22,7 +22,7 @@
 			if($getFromU->checkEmail($email) ===true){
 				$error = 'Email is already in use';
 			}else{
-				$user_id = $getFromU->create('users', array('email' => $email, 'password' => $password, 'screenName'=> $screenName, 'profileImage' => 'assets/images/defaultprofileImage.png', 'profileCover' => 'assets/images/defaultCoverImage.png'));
+				$user_id = $getFromU->create('users', array('email' => $email, 'password' => $password, 'screenName'=> $screenName, 'profileImage' => 'assets/images/defaultprofileimage.png', 'profileCover' => 'assets/images/defaultCoverImage.png'));
 				$_SESSION['user_id'] = $user_id;
 				header('Location: includes/signup.php?step=1');
 			}
