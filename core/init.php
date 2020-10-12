@@ -13,5 +13,5 @@
  $getFromT = new Post($pdo);
 
  define("BASE_URL", "https://calm-ocean-67152.herokuapp.com/");
-// define("BASE_URL", "http://localhost/twitterclone/");
+ //define("BASE_URL", "http://localhost/CS490/");
 ?>

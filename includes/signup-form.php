@@ -6,18 +6,18 @@
 	$error      = '';
 
 	if(empty($screenName) or empty($password) or empty($email)){
-		$error = 'All field are required';
+		$error = 'Please enter all of the fields';
 	}else{
 		$email      = $getFromU->checkInput($email);
 		$screenName = $getFromU->checkInput($screenName);
 		$password   = $getFromU->checkInput($password);
 		
 		if(!filter_var($email)){
-			$error = 'Invalid email format';
+			$error = 'Email is invalid, enter a valid email';
 		}else if(strlen($screenName) > 20){
 			$error = 'Name must be in between 6-20 characters';
 		}else if (strlen($password) < 5){
-			$error = 'Password is too short';
+			$error = 'Password should be more than 5 characters';
 		}else {
 			if($getFromU->checkEmail($email) ===true){
 				$error = 'Email is already in use';
@@ -30,6 +30,7 @@
 	}
 }
 ?>
+<link rel="stylesheet" href="assets/css/myeffects/mypersonal.css"/>
 <form method="post">
 <div class="signup-div"> 
 	<h3>Sign up </h3>
@@ -44,7 +45,7 @@
 			<input type="password" name="password" placeholder="Password"/>
 		</li>
 		<li>
-			<input type="submit" name="signup" Value="Register">
+			<input type="submit" name="signup" Value="Register" class = register-btn>
 		</li>
 	</ul>
 	<?php

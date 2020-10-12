@@ -11,8 +11,6 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
 		<link rel="stylesheet" href="assets/css/style-complete.css"/>
-		<link rel="stylesheet" href="assets/css/myeffects/mypersonal.css"/>
-
 	</head>
 	<!--Helvetica Neue-->
 <body>
@@ -39,7 +37,7 @@
 				<ul>
 					<li><i class="fa fa-language" aria-hidden="true"></i><a href="#">Language</a></li>
 				</ul>
-			</div>nav right ends-->
+			</div> nav right ends-->
   
 		</div><!-- nav ends -->
 
@@ -51,43 +49,16 @@
 <div class="inner-wrapper">
 	<!-- main container -->
 	<div class="main-container">
-		<!-- content left-->
-		<div class="content-left">
-			<h1>Welcome to Buzz!</h1>
-			<br/>
-			<p>A place to connect with your friends and to get updates from the people who are close.
-			See what the Buzz is about!</p>
-		</div><!-- content left ends -->	
 
 		<!-- content right ends -->
-		<div class="content-right">
-			<!-- Log In Section -->
-			<div class="login-wrapper">
-			  <?php include 'includes/login.php'; ?><!--Login Form here-->
-			</div><!-- log in wrapper end -->
+		<div class="content-center">
+
 
 			<!-- SignUp Section -->
-			
-			<!--<div class="signup-wrapper"> -->
-			<!--  <?php include 'includes/signup-form.php'; ?> SignUp Form here -->
-			<!--</div>-->
-			<!-- SIGN UP wrapper end -->
-			<div>
-
-			<!-- Registeration link -->
-			<div>
-					<button onclick="redirect()" class = register-btn>Register Now</button>
-					<script type="text/javascript">
-				    function redirect()
-				    {
-				    //change this location when deploying
-				    location.href = "https://calm-ocean-67152.herokuapp.com/register.php";
-				    
-				    }
-				 </script>
+			<div class="signup-wrapper">
+			  <?php include 'includes/signup-form.php'; ?> <!--SignUp Form here -->
 			</div>
-
-
+			<!-- SIGN UP wrapper end -->
 
 		</div><!-- content right ends -->
 
