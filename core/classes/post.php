@@ -57,7 +57,7 @@
 					<li>
 					<a href="#" class="more"><i class="fa fa-trash" aria-hidden="true"></i></a>
 					<ul> 
-					  <li><label class="deleteTweet">Delete Tweet</label></li>
+					  <li><label class="deletePost">Delete Post</label></li>
 					</ul>
 				</li>
 			</ul>

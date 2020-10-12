@@ -29,10 +29,10 @@
 		  <input type="text" name="email" placeholder="Please enter your Email here"/>
 		</li>
 		<li>
-		  <input type="password" name="password" placeholder="password"/><input type="submit" name="login" value="Log in"/>
+		  <input type="password" name="password" placeholder="password"/>
 		</li>
 		<li>
-		  <input type="checkbox" Value="Remember me">Remember me
+		  <input type= "submit" name="login" value="Log in"/>
 		</li>
 	
 		<?php

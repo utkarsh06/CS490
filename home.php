@@ -170,7 +170,8 @@
 						 	<div class="t-fo-left">
 						 		<ul>
 						 			<input type="file" name="file" id="file"/>
-						 			<li><label for="file"><i class="fa fa-camera" aria-hidden="true"></i></label>
+						 			<!-- Camera goes here!  -->
+						 			<li><label for="file"><i class="" aria-hidden="true"></i></label>
 						 			<span class="post-error"><?php if(isset($error)){echo $error;}else if(isset($imageError)){echo $imageError;}?></span>
 						 			</li>
 						 		</ul>
@@ -186,7 +187,7 @@
 
 			
 				<!--Tweet SHOW WRAPPER-->
-				 <div class="tweets">
+				 <div class="posts">
  				  	<?php $getFromT->posts(); ?>
  				 </div>
  				<!--TWEETS SHOW WRAPPER-->

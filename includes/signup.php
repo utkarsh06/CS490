@@ -57,7 +57,7 @@
 		    <div class="step-container">
 				<form method="post">
 					<h2>Choose a Username</h2>
-					<h4>Don't worry, you can always change it later.</h4>
+					<h4> </h4>
 					<div>
 						<input type="text" name="username" placeholder="Username"/>
 					</div>
@@ -77,10 +77,10 @@
 	<div class='lets-wrapper'>
 		<div class='step-letsgo'>
 			<h2>Welcome, <?php echo $user->screenName;?> </h2>
-			<p>Buzz is a constantly updating stream of the coolest, most important news, media, sports, TV, conversations and more--all tailored just for you.</p>
+			<p>Buzz allows you to connect with others and share unique moments in your life! </p>
 			<br/>
 			<p>
-				Tell us about all the stuff you love and we'll help you get set up.
+				
 			</p>
 			<span>
 				<a href='../home.php' class='backButton'>Let's go!</a>
