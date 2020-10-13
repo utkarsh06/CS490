@@ -11,6 +11,7 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
 		<link rel="stylesheet" href="assets/css/style-complete.css"/>
+
 	</head>
 	<!--Helvetica Neue-->
 <body>
@@ -55,8 +56,10 @@
 
 
 			<!-- SignUp Section -->
-			<div class="signup-wrapper">
-			  <?php include 'includes/signup-form.php'; ?> <!--SignUp Form here -->
+			<div class = "">
+				<div class="signup-wrapper" id = "center-form">
+				  <?php include 'includes/signup-form.php'; ?> <!--SignUp Form here -->
+				</div>
 			</div>
 			<!-- SIGN UP wrapper end -->
 

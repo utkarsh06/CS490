@@ -30,31 +30,41 @@
 	}
 }
 ?>
-<link rel="stylesheet" href="assets/css/myeffects/mypersonal.css"/>
-<form method="post">
-<div class="signup-div"> 
-	<h3>Sign up </h3>
-	<ul>
-		<li>
-		    <input type="text" name="screenName" placeholder="Full Name"/>
-		</li>
-		<li>
-		    <input type="email" name="email" placeholder="Email"/>
-		</li>
-		<li>
-			<input type="password" name="password" placeholder="Password"/>
-		</li>
-		<li>
-			<input type="submit" name="signup" Value="Register" class = register-btn>
-		</li>
-	</ul>
-	<?php
-		if(isset($error)){
-			echo ' <li class="error-li">
-	  <div class="span-fp-error">'.$error.'</div>
-	 </li> ';
-		}
-	?>
-	
+<link rel="stylesheet" href="assets/css/myeffects/login.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
+
+<div class = "" >
+	<form method="post" class = "login-form">
+	<div style = "text-align: center" class="signup-div" > 
+		<h3>Sign up </h3>
+		<ul>
+			<div class = "floating-label">
+				<li>
+				    <input type="text" name="screenName" placeholder="Full Name"/>
+				</li>
+			</div>
+			<div class = "floating-label">
+				<li>
+				    <input type="email" name="email" placeholder="Email"/>
+				</li>
+			</div>
+			<div class = "floating-label">
+				<li>
+					<input type="password" name="password" placeholder="Password"/>
+				</li>
+			</div>
+			<li>
+				<input type="submit" name="signup" Value="Register" class = register-btn>
+			</li>
+		</ul>
+		<?php
+			if(isset($error)){
+				echo ' <li class="error-li">
+		  <div class="span-fp-error">'.$error.'</div>
+		 </li> ';
+			}
+		?>
+		
+	</div>
+	</form>
 </div>
-</form>

@@ -22,14 +22,21 @@
 	}
 }
 ?>
+<!-- <link rel="stylesheet" href="assets/css/myeffects/login.css"/> -->
+<link rel="stylesheet" href="assets/css/myeffects/mypersonal.css"/>
 <div class="login-div">
-<form method="post"> 
+<form method="post" class = "form-login" > 
 	<ul>
+		<h1> Log in </h1>
 		<li>
-		  <input type="text" name="email" placeholder="Please enter your Email here"/>
+		  <div class = "floating-label">
+		  	<input type="text" name="email" placeholder="Please enter your Email here"/>
+		  </div>
 		</li>
 		<li>
-		  <input type="password" name="password" placeholder="password"/>
+			<div class = "floating-label">
+		  		<input type="password" name="password" placeholder="password"/>
+		  	</div>
 		</li>
 		<li>
 		  <input type= "submit" name="login" value="Log in"/>
