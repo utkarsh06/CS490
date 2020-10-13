@@ -113,7 +113,8 @@
 				<div class="info-in-footer">
 					<div class="number-wrapper">
 						<div class="num-box">
-							<div class="num-head">
+							<!--Posts, Following , Followers-->
+							<!--<div class="num-head">
 								POSTS
 							</div>
 							<div class="num-body">
@@ -133,7 +134,7 @@
 								FOLLOWERS
 							</div>
 							<div class="num-body">
-								<span class="count-followers"><?php echo $user->followers;?></span>
+								<span class="count-followers"><?php echo $user->followers;?></span> -->
 							</div>
 						</div>	
 					</div><!-- mumber wrapper-->

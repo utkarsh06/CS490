@@ -51,11 +51,11 @@
 	<div class="t-show-footer">
 		<div class="t-s-f-right">
 			<ul> 
-				<li><button><a href="#"><i class="fa fa-reply" aria-hidden="true"></i></a></button></li>	
+				<li><button><a href="#"><i class="<!--fa fa-reply-->" aria-hidden="true"></i></a></button></li>	
 				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
 				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
 					<li>
-					<a href="#" class="more"><i class="fa fa-trash" aria-hidden="true"></i></a>
+					<a href="#" class="more"><i class="<!--fa fa-trash-->" aria-hidden="true"></i></a>
 					<ul> 
 					  <li><label class="deletePost">Delete Post</label></li>
 					</ul>
