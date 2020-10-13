@@ -5,7 +5,7 @@
    	$this->pdo = $pdo;
    }
    public function posts(){
-   	$stmt = $this->pdo->prepare("SELECT * FROM `posts`, `users` WHERE `postBy` = `user_id`");
+   	$stmt = $this->pdo->prepare("SELECT * FROM `tweets`, `users` WHERE `tweetBy` = `user_id`");
    	$stmt->execute();
    	$posts = $stmt->fetchAll(PDO::FETCH_OBJ);
 
