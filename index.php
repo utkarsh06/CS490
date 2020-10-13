@@ -62,7 +62,7 @@
 		<!-- content right ends -->
 		<div class="content-right">
 			<!-- Log In Section -->
-			<div class="login-wrapper">
+			<div class="login-wrapper" id= "center-form">
 			  <?php include 'includes/login.php'; ?><!--Login Form here-->
 			</div><!-- log in wrapper end -->
 

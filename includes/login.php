@@ -25,7 +25,7 @@
 <!-- <link rel="stylesheet" href="assets/css/myeffects/login.css"/> -->
 <link rel="stylesheet" href="assets/css/myeffects/mypersonal.css"/>
 <div class="login-div">
-<form method="post" class = "form-login" > 
+<form method="post" class = "center-form" > 
 	<ul>
 		<h1> Log in </h1>
 		<li>
