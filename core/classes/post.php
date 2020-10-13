@@ -36,12 +36,12 @@
 				</div>
 			</div>
 		</div>';
-		if(!empty($post->postImage)){
+		if(!empty($post->tweetImage)){
 		echo'<!--tweet show head end-->
 		 <div class="t-show-body">
 		   <div class="t-s-b-inner">
 		    <div class="t-s-b-inner-in">
-		     <img src="'.$post->postImage.'" class="imagePopup"/>
+		     <img src="'.$post->tweetImage.'" class="imagePopup"/>
 		   </div>
 		  </div>
 		</div>

@@ -16,7 +16,7 @@
  		if(strlen($status) > 140){
  			$error = "The text of your post is too long.";
  		}
- 		$getFromU->create('tweets', array('status'=> $status, 'tweetBy' => $user_id, 'postImage'=> $postImage, 'postedOn' => date('Y-m-d H:i:s')));
+ 		$getFromU->create('tweets', array('status'=> $status, 'tweetBy' => $user_id, 'tweetImage'=> $tweetImage, 'postedOn' => date('Y-m-d H:i:s')));
  	}else{
  		$error = "Type or choose image to post.";
  	}
