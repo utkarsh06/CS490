@@ -5,7 +5,7 @@
    	$this->pdo = $pdo;
    }
    public function posts(){
-   	$stmt = $this->pdo->prepare("SELECT * FROM `tweets`, `users` WHERE `tweetBy` = `user_id`");
+   	$stmt = $this->pdo->prepare("SELECT * FROM `posts`, `users` WHERE `postBy` = `user_id`");
    	$stmt->execute();
    	$posts = $stmt->fetchAll(PDO::FETCH_OBJ);
 
@@ -36,12 +36,12 @@
 				</div>
 			</div>
 		</div>';
-		if(!empty($post->tweetImage)){
+		if(!empty($post->postImage)){
 		echo'<!--tweet show head end-->
 		 <div class="t-show-body">
 		   <div class="t-s-b-inner">
 		    <div class="t-s-b-inner-in">
-		     <img src="'.$post->tweetImage.'" class="imagePopup"/>
+		     <img src="'.$post->postImage.'" class="imagePopup"/>
 		   </div>
 		  </div>
 		</div>
