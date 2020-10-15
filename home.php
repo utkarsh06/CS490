@@ -33,9 +33,11 @@
    		  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>  	  
 	</head>
 	<!--Helvetica Neue-->
-<body>
+<body >
 <div class="wrapper">
 <!-- header wrapper -->
+
+
 <div class="header-wrapper">
 
 <div class="nav-container">
@@ -85,8 +87,9 @@
 <script type="text/javascript" src="assets/js/search.js"></script>
 
 <!---Inner wrapper-->
-<div class="inner-wrapper">
-<div class="in-wrapper">
+<div class="inner-wrapper" >
+
+<div class="in-wrapper" >
 	<div class="in-full-wrap">
 		<div class="in-left">
 			<div class="in-left-wrap">

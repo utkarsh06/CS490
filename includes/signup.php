@@ -32,7 +32,9 @@
 		<link rel="stylesheet" href="../assets/css/style-complete.css"/>
 	</head>
 	<!--Helvetica Neue-->
-<body>
+<body style="background-image: url('../assets/images/defaultCoverImage.png'); background-repeat: no-repeat; background-size: cover;">
+<div >
+
 <div class="wrapper">
 <!-- nav wrapper -->
 <div class="nav-wrapper">
@@ -56,7 +58,7 @@
  		<div class="step-wrapper">
 		    <div class="step-container">
 				<form method="post">
-					<h2>Choose a Username</h2>
+					<h2 style = "color: white">Choose a Username</h2>
 					<h4> </h4>
 					<div>
 						<input type="text" name="username" placeholder="Username"/>
@@ -76,14 +78,14 @@
   		<?php if($_GET['step'] == '2'){?>	
 	<div class='lets-wrapper'>
 		<div class='step-letsgo'>
-			<h2>Welcome, <?php echo $user->screenName;?> </h2>
-			<p>Buzz allows you to connect with others and share unique moments in your life! </p>
+			<h2 style = "color: white">Welcome, <?php echo $user->screenName;?> </h2>
+			<p style = "color: white">Buzz allows you to connect with others and share unique moments in your life! </p>
 			<br/>
 			<p>
 				
 			</p>
-			<span>
-				<a href='../home.php' class='backButton'>Let's go!</a>
+			<span style = "color: white">
+				<a style = "color: white;" href='../home.php' class='backButton'>Let's go!</a>
 			</span>
 		</div>
 	</div>
@@ -94,6 +96,8 @@
 </div><!-- inner wrapper ends-->
 </div><!-- ends wrapper -->
 
+<!-- image div end -->
+</div>
 </body>
 </html>
 		<?php
