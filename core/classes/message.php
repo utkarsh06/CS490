@@ -17,6 +17,7 @@
     	$stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
     	$stmt->execute();
     	$messages = $stmt->fetchALL(PDO::FETCH_OBJ);
+    	$user     = $this->userData($user_id);
     	foreach ($messages as $message) {
     		if($message->messageFrom === $user_id){
     			echo '<!-- Main message BODY RIGHT START -->

@@ -40,13 +40,16 @@
 		<div class="message-recent">
 		<?php foreach ($messages as $message) :?>
 			<!--Direct Messages-->		
-			<div class="people-message" data-user="<?php echo $message->user_id; ?>">
+			<div class="people-message" data-user="<?php echo $user->user_id; ?>">
 				<div class="people-inner">
 					<div class="people-img">
 						<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 					</div>
 					<div class="name-right2">
 						<span><a href="#"><?php echo $user->screenName;?></a></span><span>@<?php echo $user->username;?></span>
+					</div>
+					<div class="msg-box">
+							<?php echo $message->message;  ?>
 					</div>
 					
 					<span>
@@ -81,7 +84,7 @@
 			<div class="back-body">
 			<?php foreach($messages as $message) :?>
 			<!--Direct Messages-->
-				<div class="people-message" data-user="<?php echo $message->user_id; ?>">
+				<div class="people-message" data-user="<?php echo $user->user_id; ?>">
 					<div class="people-inner">
 						<div class="people-img">
 							<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
@@ -116,6 +119,7 @@
   if(isset($_POST['showChatPopup']) && !empty($_POST['showChatPopup'])){
   	$messageFrom = $_POST['showChatPopup'];
   	$user_id     = $_SESSION['user_id'];
+  	$user    = $getFromU->userData($user_id);
   	?>
   	<!-- MESSAGE CHAT START -->
 <div class="popup-message-body-wrap">
@@ -125,11 +129,11 @@
 	<div class="message-send2">
 		<div class="message-header2">
 			<div class="message-h-left">
-				<label class="back-messages" for="mass"><i class="fa fa-angle-left" aria-hidden="true"></i></label>
+				<label  class="back-messages" for="mass"><i class="fa fa-angle-left" aria-hidden="true"></i></label>
 			</div>
 		<div class="message-h-cen">
 			<div class="message-head-img">
-			<img src="PROFILE-IMAGE"/><h4>Messages</h4>
+			<img src="<?php echo BASE_URL.$user->profileImage;?>"/><h4>Messages</h4>
 			</div>
 		</div>
 		<div class="message-h-right">
@@ -151,7 +155,7 @@
 	</div>
 	<div class="main-msg-wrap">
       <div class="main-msg-inner">
-     
+						
  	  </div>
 	</div>
 	<div class="main-msg-footer">

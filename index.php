@@ -81,7 +81,9 @@
 				    function redirect()
 				    {
 				    //change this location when deploying
-				    location.href = "https://calm-ocean-67152.herokuapp.com/register.php";
+				    
+				    //location.href = "https://calm-ocean-67152.herokuapp.com/register.php";
+				    location.href = "register.php";
 				    
 				    }
 				 </script>
