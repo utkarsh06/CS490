@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	-->
-	<div class="t-show-popup">
+	<div class="t-show-popup" data-post= "'.$post->tweetID.'" >
 		<div class="t-show-head">
 			<div class="t-show-img">
 				<img src="'.$post->profileImage.'"/>
@@ -29,10 +29,10 @@
 				<div class="t-h-c-name">
 					<span><a href="'.$post->username.'">'.$post->screenName.'</a></span>
 					<span>@'.$post->username.'</span>
-					<span>'.$post->postedOn.'</span>
+					<span>'.$this->timeAgo($post->postedOn).'</span>
 				</div>
 				<div class="t-h-c-dis">
-					'.$post->status.'
+					'.$this->getPostLinks($post->status).'
 				</div>
 			</div>
 		</div>';
@@ -67,6 +67,27 @@
 </div>
 </div>';
    	}
+   }
+
+   public function comments($tweet_id){
+  	$stmt = $this->pdo->prepare("SELECT * FROM `comments` LEFT JOIN `users` ON `commentBy` = `user_id` WHERE `commentOn` = :tweet_id");
+   	$stmt->bindParam(":tweet_id", $tweet_id, PDO::PARAM_INT);
+   	$stmt->execute();
+   	return $stmt->fetchAll(PDO::FETCH_OBJ);
+   }
+
+   public function getPopupPost($tweet_id){
+   		$stmt = $this->pdo->prepare("SELECT * FROM `tweets` , `users` WHERE `tweetID` = :tweet_id AND `tweetBy` = `user_id`");
+   		$stmt->bindParam(":tweet_id", $tweet_id, PDO::PARAM_INT);
+   		$stmt->execute();
+   		return $stmt->fetchAll(PDO::FETCH_OBJ);
+   }
+
+   public function getPostLinks($post){
+   	$post = preg_replace("/(https?:\/\/)([\w]+.)([\w\.]+)/", "<a href='$0' target = '_blink'>$0</a>", $post);
+   	$post = preg_replace("/#([\w]+)/", "<a href='".BASE_URL."hashtag/$1'>$0</a> ", $post);
+   	$post = preg_replace("/@([\w]+)/", "<a href='".BASE_URL."hashtag/$1'>$0</a> ", $post);
+   	return $post;
    }
 
  }

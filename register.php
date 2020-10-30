@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="assets/css/myeffects/login.css"/>
 
 	</head>
-	<!--Helvetica Neue-->
+	
 <body>
 <div class="front-img">
 	<img src="assets/images/defaultCoverImage.png"></img>
@@ -25,7 +25,7 @@
 <div class="header-wrapper">
 	
 	<div class="nav-container">
-		<!-- Nav -->
+	
 		<div class="nav">
 			
 			<div class="nav-left">

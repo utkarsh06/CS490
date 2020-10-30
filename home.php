@@ -44,9 +44,9 @@
 		
 		<div class="nav-left">
 			<ul>
-				<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-				<!--<li><a href="i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li>
-				<li><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li>-->
+				<li><a href="home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+				<!--<li><a href="i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li> -->
+				<li id= "messagePopup"><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li>
 			</ul>
 		</div><!-- nav left ends-->
 
@@ -150,7 +150,7 @@
 		</div><!-- in left end-->
 		<div class="in-center">
 			<div class="in-center-wrap">
-				<!--TWEET WRAPPER-->
+				<!--Post WRAPPER-->
 				<div class="post-wrap">
 					<div class="post-inner">
 						 <div class="post-h-left">
@@ -171,8 +171,8 @@
 						 	<div class="t-fo-left">
 						 		<ul>
 						 			<input type="file" name="file" id="file"/>
-						 			<!-- Camera goes here!  -->
-						 			<li><label for="file"><i class="" aria-hidden="true"></i></label>
+			<!-- Camera icon goes here!  -->
+						 			<li><label for="file"><i class="fa fa-camera" aria-hidden="true"></i></label>
 						 			<span class="post-error"><?php if(isset($error)){echo $error;}else if(isset($imageError)){echo $imageError;}?></span>
 						 			</li>
 						 		</ul>
@@ -184,21 +184,24 @@
 						 	</div>
 						 </div>
 					</div>
-				</div><!--TWEET WRAP END-->
+				</div><!--Post WRAP END-->
 
 			
-				<!--Tweet SHOW WRAPPER-->
+				<!--Post SHOW WRAPPER-->
 				 <div class="posts">
  				  	<?php $getFromT->posts(); ?>
  				 </div>
- 				<!--TWEETS SHOW WRAPPER-->
+ 				<!--Post SHOW WRAPPER-->
 
 		    	<div class="loading-div">
 		    		<img id="loader" src="assets/images/loading.svg" style="display: none;"/> 
 		    	</div>
 				<div class="popupPost"></div>
 				<!--Tweet END WRAPER-->
- 			
+ 			<script type="text/javascript" src="assets/js/popupposts.js"></script>
+ 			<script type="text/javascript" src="assets/js/messages.js"></script>
+ 			<script type="text/javascript" src="assets/js/comment.js"></script>
+
 			</div><!-- in left wrap-->
 		</div><!-- in center end -->
 

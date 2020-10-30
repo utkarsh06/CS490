@@ -36,8 +36,8 @@
 		<div class="nav-left">
 			<ul>
 				<li><a href="<?php echo BASE_URL;?>home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-				<li><a href="<?php echo BASE_URL;?>i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li>
-				<li><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li>
+				<!--<li><a href="<?php echo BASE_URL;?>i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li>
+				<li><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li> -->
 				 
 			</ul>
 		</div><!-- nav left ends-->
@@ -81,39 +81,39 @@
 	<ul>
 		<li>
 		<div class="n-head">
-			POSTS
+			<!--POSTS -->
 		</div>
 		<div class="n-bottom">
-		  0
+		  <!-- 0 -->
 		</div>
 		</li>
 		<li>
 			<a href="<?php echo BASE_URL.$profileData->username;?>/following">
 				<div class="n-head">
-					<a href="<?php echo BASE_URL.$profileData->username;?>/following">FOLLOWING</a>
+					<a href="<?php echo BASE_URL.$profileData->username;?>/following"><!--FOLLOWING --></a>
 				</div>
 				<div class="n-bottom">
-					<span class="count-following"><?php echo $profileData->following;?></span>
+					<span class="count-following"><!--<?php echo $profileData->following;?> --></span>
 				</div>
 			</a>
 		</li>
 		<li>
 		 <a href="<?php echo BASE_URL.$profileData->username;?>/followers">
 				<div class="n-head">
-					FOLLOWERS
+					<!-- FOLLOWERS -->
 				</div>
 				<div class="n-bottom">
-					<span class="count-followers"><?php echo $profileData->followers;?></span>
+					<span class="count-followers"><!--<?php echo $profileData->followers;?> --></span>
 				</div>
 			</a>
 		</li>
 		<li>
 			<a href="#">
 				<div class="n-head">
-					LIKES
+					<!--LIKES-->
 				</div>
 				<div class="n-bottom">
-					0
+					<!-- 0 -->
 				</div>
 			</a>
 		</li>
@@ -228,7 +228,14 @@
 
 	</div>
 	<!-- in left wrap-->
+	<div class="popupPost"></div>
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/messages.js"></script>
 
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/search.js"></script>
+
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/popupposts.js"></script>
+	
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/comment.js"></script>
   </div>
 	<!-- in left end-->
 

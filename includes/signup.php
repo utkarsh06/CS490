@@ -10,11 +10,11 @@
 			$username = $getFromU -> checkInput($_POST['username']);
 			if(!empty($username)){
 				if(strlen($username) > 20){
-					$error = " Username must be between in 6 to 20 characters";
+					$error = " Username must be between 6 to 20 characters";
 				}else if($getFromU->checkUsername($username) === true){
 					$error = "Username is already taken!";
 				}else{
-					//update Username
+					//update Table with new Username
 					$getFromU->update('users', $user_id, array('username' => $username));
 					header('Location: signup.php?step=2');
 				}
@@ -32,7 +32,7 @@
 		<link rel="stylesheet" href="../assets/css/style-complete.css"/>
 	</head>
 	<!--Helvetica Neue-->
-<body>
+<body style="background-image: url('../assets/images/defaultCoverImage.png'); background-repeat: no-repeat; background-size: cover;">
 <div class="wrapper">
 <!-- nav wrapper -->
 <div class="nav-wrapper">
@@ -40,7 +40,7 @@
 	<div class="nav-container">	
 		<div class="nav-second">
 			<ul>
-				<li><a href="#"<i class="fa fa-twitter" aria-hidden="true"></i></a></li>							
+				<li><a href="#"<i class="" aria-hidden="true"></i></a></li>							
 			</ul>
 		</div><!-- nav second ends-->
 	</div><!-- nav container ends -->
@@ -56,7 +56,7 @@
  		<div class="step-wrapper">
 		    <div class="step-container">
 				<form method="post">
-					<h2>Choose a Username</h2>
+					<h2 style = "color: white;">Choose a Username</h2>
 					<h4> </h4>
 					<div>
 						<input type="text" name="username" placeholder="Username"/>
@@ -73,21 +73,21 @@
 			</div>
 		</div>
   		<?php } ?>
-  		<?php if($_GET['step'] == '2'){?>	
+  		<?php if($_GET['step'] == '2'){ ?>	
 	<div class='lets-wrapper'>
 		<div class='step-letsgo'>
-			<h2>Welcome, <?php echo $user->screenName;?> </h2>
-			<p>Buzz allows you to connect with others and share unique moments in your life! </p>
+			<h2 style = "color: white;">Welcome, <?php echo $user->screenName;?> </h2>
+			<p style = "color: white;">Buzz allows you to connect with others and share unique moments in your life! </p>
 			<br/>
 			<p>
 				
 			</p>
 			<span>
-				<a href='../home.php' class='backButton'>Let's go!</a>
+				<a style = "color: white;" href='../home.php' class='backButton'>Let's go!</a>
 			</span>
 		</div>
 	</div>
-  	<?php }?>
+  	<?php } ?>
 		
 	</div><!-- main container end -->
 

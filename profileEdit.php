@@ -67,8 +67,8 @@
 		<div class="nav-left">
 			<ul>
 				<li><a href="home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-				<li><a href="i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li>
-				<l><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li>
+				<!--<li><a href="i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li>
+				<l><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li> -->
 			</ul>
 		</div>
 		<!-- nav left ends-->
@@ -145,40 +145,40 @@
 			<li>
 				<a href="#">
 					<div class="n-head">
-						POSTS
+						<!--POSTS -->
 					</div>
 					<div class="n-bottom">
-						0
+						<!-- 0 -->
 					</div>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<div class="n-head">
-						FOLLOWINGS
+						<!--FOLLOWINGS-->
 					</div>
 					<div class="n-bottom">
-						<?php echo $user->following; ?>
+					  <!--<?php echo $user->following; ?>-->
 					</div>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<div class="n-head">
-						FOLLOWERS
+						<!--FOLLOWERS -->
 					</div>
 					<div class="n-bottom">
-						<?php echo $user->followers; ?>
+						<!--<?php echo $user->followers; ?> -->
 					</div>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<div class="n-head">
-						LIKES
+						<!--LIKES -->
 					</div>
 					<div class="n-bottom">
-						0
+						<!-- 0 -->
 					</div>
 				</a>
 			</li>
@@ -327,6 +327,14 @@
 		<!--PROFILE INFO WRAPPER END-->
 	</div>
 	<!-- in left wrap-->
+	<div class="popupPost"></div>
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/messages.js"></script>
+
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/search.js"></script>
+
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/popupposts.js"></script>
+	
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/comment.js"></script>
 </div>
 <!-- in left end-->
 
