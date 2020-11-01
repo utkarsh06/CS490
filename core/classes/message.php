@@ -16,9 +16,10 @@
     	$stmt->bindParam(":messageFrom", $messageFrom,PDO::PARAM_INT);
     	$stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
     	$stmt->execute();
-    	$messages = $stmt->fetchALL(PDO::FETCH_OBJ);
+    	$messages = $stmt->fetchAll(PDO::FETCH_OBJ);
     	$user     = $this->userData($user_id);
     	foreach ($messages as $message) {
+    		echo 'Hello World';
     		if($message->messageFrom === $user_id){
     			echo '<!-- Main message BODY RIGHT START -->
 		<div class="main-msg-body-right">
