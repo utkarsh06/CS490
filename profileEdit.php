@@ -335,6 +335,8 @@
 	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/popupposts.js"></script>
 	
 	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/comment.js"></script>
+	
+	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/postMessage.js"></script>
 </div>
 <!-- in left end-->
 

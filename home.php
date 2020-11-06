@@ -199,8 +199,12 @@
 				<div class="popupPost"></div>
 				<!--Tweet END WRAPER-->
  			<script type="text/javascript" src="assets/js/popupposts.js"></script>
+
  			<script type="text/javascript" src="assets/js/messages.js"></script>
+
  			<script type="text/javascript" src="assets/js/comment.js"></script>
+ 			
+ 			<script type="text/javascript" src="assets/js/postMessage.js"></script>
 
 			</div><!-- in left wrap-->
 		</div><!-- in center end -->

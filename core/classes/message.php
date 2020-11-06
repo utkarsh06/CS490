@@ -17,15 +17,15 @@
     	$stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
     	$stmt->execute();
     	$messages = $stmt->fetchAll(PDO::FETCH_OBJ);
+    	$messagee = $this->recentMessages($user_id);
     	$user     = $this->userData($user_id);
-    	foreach ($messages as $message) {
-    		echo 'Hello World';
+    	foreach ($messagee as $message) {
     		if($message->messageFrom === $user_id){
     			echo '<!-- Main message BODY RIGHT START -->
 		<div class="main-msg-body-right">
 			<div class="main-msg">
 				<div class="msg-img">
-					<a href="#"><img src="'.BASE_URL.$message->profileImage.'"/></a>
+					<a href="#"><img src="'.BASE_URL.$user->profileImage.'"/></a>
 			</div>
 			<div class="msg">'.$message->message.'
 				<div class="msg-time">
@@ -34,7 +34,7 @@
 			</div>
 			<div class="msg-btn">
 				<a><i class="fa fa-ban" aria-hidden="true"></i></a>
-				<a class="deleteMsg" data-user="'.$message->user_id.'"><i class="fa fa-trash" aria-hidden="true"></i></a>
+				<a class="deleteMsg" data-message="'.$message->messageID.'"><i class="fa fa-trash" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
@@ -44,7 +44,7 @@
 		<div class="main-msg-body-left">
 			<div class="main-msg-l">
 				<div class="msg-img-l">
-					<a href="#"><img src="'.BASE_URL.$message->profileImage.'"/></a>
+					<a href="#"><img src="'.BASE_URL.$user->profileImage.'"/></a>
 				</div>
 				<div class="msg-l">'.$message->message.'
 					<div class="msg-time-l">
@@ -53,13 +53,21 @@
 				</div>
 				<div class="msg-btn-l">	
 					<a><i class="fa fa-ban" aria-hidden="true"></i></a>
-					<a class="deleteMsg" data-user="'.$message->user_id.'"><i class="fa fa-trash" aria-hidden="true"></i></a>
+					<a class="deleteMsg"  data-message="'.$message->messageID.'"><i class="fa fa-trash" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div> 
 	<!--Main message BODY LEFT END-->';
     		}
     	}
+     }
+
+     public function deleteMsg($messageID, $user_id){
+     	$stmt = $this->pdo->prepare("DELETE FROM `messages` WHERE `messageID` = :messageID and `messageFrom` = :user_id OR `messageID` = :messageID and `messageTo` = :user_id");
+     	$stmt->bindParam(":messageID", $messageID, PDO::PARAM_INT);
+     	$stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+     	$stmt->execute();
+
      }
 
    }
