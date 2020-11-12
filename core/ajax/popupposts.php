@@ -1,10 +1,10 @@
 <?php
 	include '../init.php';
 	if(isset($_POST['showpopup']) && !empty($_POST['showpopup'])){
-		$tweetID = $_POST['showpopup'];
-		$user_id = $_SESSION['user_id'];
-		$post    = $getFromT->getPopupPost($tweetID);
-		$user    = $getFromU->userData($user_id);
+		$tweetID  = $_POST['showpopup'];
+		$user_id  = $_SESSION['user_id'];
+		$post     = $getFromT->getPopupPost($tweetID);
+		$user     = $getFromU->userData($user_id);
 		$comments = $getFromT->comments($tweetID);
 		
 

@@ -2,18 +2,17 @@ $(function(){
 	$(document).on('click', '#messagePopup', function(){
 		var getMessages = 1; 
 		$.post('http://localhost/twitterclone/core/ajax/messages.php', {showMessage:getMessages}, function(data){
+	  //$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showMessage:getMessages}, function(data){
 			$('.popupPost').html(data);
-			//$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showMessage:getMessages}, function(data){
- 		    //$('.popupPost').html(data);
+			
 		});
 	});
 
 	$(document).on('click', '.people-message', function(){
 		var get_id = $(this).data('user');
 		$.post('http://localhost/twitterclone/core/ajax/messages.php',{showChatPopup:get_id}, function(data){
+	  //$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showChatPopup:get_id}, function(data){
 			$('.popupPost').html(data);
-			//$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showChatPopup:get_id}, function(data){
- 		    //$('.popupPost').html(data);
  		     if(autoscroll){
 			   	scrolldown();
 			   }
@@ -31,9 +30,9 @@ $(function(){
 		});
 		getMessages = function(){
 			$.post('http://localhost/twitterclone/core/ajax/messages.php', {showChatMessage:get_id}, function(data){
+		  //$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showChatMessage:get_id}, function(data){
 			   $('.main-msg-inner').html(data);
-			   //$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showChatMessage:get_id}, function(data){
- 		      //$('.main-msg-inner').html(data);
+			     
 			   if(autoscroll){
 			   	 scrolldown();
 			   }
@@ -62,12 +61,10 @@ $(function(){
 	   }
 
 	  $(document).on('click', '.back-messages', function(){
-	  // $('.back-messages').click(function(){
 		var getMessages = 1; 
 		$.post('http://localhost/twitterclone/core/ajax/messages.php', {showMessage:getMessages}, function(data){
+	  //$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showMessage:getMessages}, function(data){
 			$('.popupPost').html(data);
-			//$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {showMessage:getMessages}, function(data){
- 		    //$('.popupPost').html(data);
  		    clearInterval(timer);
 		 });
 	 });
@@ -82,6 +79,7 @@ $(function(){
 
 	  	$(document).on('click', '.delete', function(){
 	  	  $.post('http://localhost/twitterclone/core/ajax/messages.php', {deleteMsg:messageID}, function(data){
+	  	//$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {deleteMsg:messageID}, function(data){
 	  	  	$('.message-del-inner').height('0px');
 	  	  	getMessages();
 	  	  })

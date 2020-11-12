@@ -12,7 +12,7 @@
   	$message = $getFromU->checkInput($_POST['sendMessage']);
   	$get_id  = $_POST['get_id'];
   	if(!empty($message)){
-  		$getFromU->create('messages', array('messageTo' => $get_id, 'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
+  		$getFromU->create('messages', array('messageTo' =>  $get_id, 'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
 
   	}
   }
@@ -97,7 +97,7 @@
 			<div class="back-body">
 			<?php foreach($messages as $message) :?>
 			<!--Direct Messages-->
-				<div class="people-message" data-user="<?php echo $user->user_id; ?>">
+				<div class="people-message" data-user="<?php echo $message->user_id; ?>">
 					<div class="people-inner">
 						<div class="people-img">
 							<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
