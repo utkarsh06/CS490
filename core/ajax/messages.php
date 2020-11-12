@@ -27,7 +27,7 @@
   if(isset($_POST['showMessage']) && !empty($_POST['showMessage'])){
   	$user_id  = $_SESSION['user_id'];
   	$messages = $getFromM->recentMessages($user_id);
-  	$user    = $getFromU->userData($user_id);
+  	$user     = $getFromU->userData($user_id);
   	?>
   	<div class="popup-message-wrap">
 		<input id="popup-message-tweet" type="checkbox" checked="unchecked"/>
@@ -97,7 +97,7 @@
 			<div class="back-body">
 			<?php foreach($messages as $message) :?>
 			<!--Direct Messages-->
-				<div class="people-message" data-user="<?php echo $message->user_id; ?>">
+				<div class="people-message" data-user="<?php echo $user->user_id; ?>">
 					<div class="people-inner">
 						<div class="people-img">
 							<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
