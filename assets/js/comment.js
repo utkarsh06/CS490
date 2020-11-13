@@ -1,6 +1,6 @@
 $(function(){
 	$(document).on('click', '#postComment', function(){
-		var comment = $('#commentField').val();
+		var comment  = $('#commentField').val();
 		var tweet_id = $('#commentField').data('post');
 
 		if(comment != ""){

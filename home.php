@@ -65,7 +65,7 @@
 					<div class="drop-inner">
 						<ul>
 							<li><a href="<?php echo $user->username;?>"><?php echo $user->username;?></a></li>
-							<li><a href="settings/account">Settings</a></li>
+							<li><a href="profileEdit.php">Settings</a></li>
 							<li><a href="includes/logout.php">Log out</a></li>
 						</ul>
 					</div>
@@ -198,6 +198,7 @@
 		    	</div>
 				<div class="popupPost"></div>
 				<!--Tweet END WRAPER-->
+
  			<script type="text/javascript" src="assets/js/popupposts.js"></script>
 
  			<script type="text/javascript" src="assets/js/messages.js"></script>

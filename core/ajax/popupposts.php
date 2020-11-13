@@ -10,16 +10,16 @@
 
 		?>
 		<div class="tweet-show-popup-wrap">
-<input type="checkbox" id="tweet-show-popup-wrap">
-<div class="wrap4">
-	<label for="tweet-show-popup-wrap">
-		<div class="tweet-show-popup-box-cut">
-			<i class="fa fa-times" aria-hidden="true"></i>
-		</div>
-	</label>
-	<div class="tweet-show-popup-box">
-	<div class="tweet-show-popup-inner">
-		<div class="tweet-show-popup-head">
+		<input type="checkbox" id="tweet-show-popup-wrap">
+			<div class="wrap4">
+				<label for="tweet-show-popup-wrap">
+					<div class="tweet-show-popup-box-cut">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+				</label>
+			<div class="tweet-show-popup-box">
+				<div class="tweet-show-popup-inner">
+					<div class="tweet-show-popup-head">
 			<div class="tweet-show-popup-head-left">
 				<div class="tweet-show-popup-img">
 					<img src="<?php echo BASE_URL.$user->profileImage; ?>"/>

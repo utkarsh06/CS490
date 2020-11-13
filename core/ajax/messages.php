@@ -12,8 +12,11 @@
   	$message = $getFromU->checkInput($_POST['sendMessage']);
   	$get_id  = $_POST['get_id'];
   	if(!empty($message)){
-  		$getFromU->create('messages', array('messageTo' =>  $get_id, 'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
+  		$getFromU->create('messages', array('messageTo' => $get_id,'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
 
+  		//$getFromU->create('messages', array('messageTo' => $user_id,'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
+
+  		$getFromU->create('messages', array('messageTo' => $user_id, 'messageFrom' => $user_id));
   	}
   }
 
@@ -22,6 +25,7 @@
   	$messageFrom = $_POST['showChatMessage'];
   	$getFromM->getMessages($messageFrom, $user_id);
   	$user    = $getFromU->userData($user_id);
+
   }
 
   if(isset($_POST['showMessage']) && !empty($_POST['showMessage'])){
