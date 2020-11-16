@@ -54,14 +54,14 @@
 					<div class="drop-inner">
 						<ul>
 							<li><a href="<?php echo BASE_URL.$user->username;?>"><?php echo $user->username;?></a></li>
-							<li><a href="<?php echo BASE_URL;?>settings/account">Settings</a></li>
+							<li><a href="<?php echo BASE_URL;?>/profileEdit.php">Settings</a></li>
 							<li><a href="<?php echo BASE_URL;?>includes/logout.php">Log out</a></li>
 						</ul>
 					</div>
 				</div>
 		
 				</li>
-				<li><label for="pop-up-tweet" class="addTweetBtn">Post</label></li>
+			<!--	<li><label for="pop-up-tweet" class="addTweetBtn">Post</label></li> -->
 			</ul>
 		</div><!-- nav right ends-->
 
@@ -120,7 +120,7 @@
 	</ul>
 	<div class="edit-button">
 		<span>
-			<button class="f-btn follow-btn"  data-follow="user_id" data-user="user_id"><i class="fa fa-user-plus"></i> Follow </button>
+			<!--<button class="f-btn follow-btn"  data-follow="user_id" data-user="user_id"><i class="fa fa-user-plus"></i> Follow </button> -->
 		</span>
 	</div>
     </div>
@@ -244,6 +244,67 @@
 <div class="in-center">
 	<div class="in-center-wrap">
 	<!--Tweet SHOW WRAPER-->
+	<?php
+		$posts = $getFromT->getUserPosts($profileId);
+		foreach($posts as $post){
+   		echo '<div class="all-tweet">
+			<div class="t-show-wrap">	
+ 				<div class="t-show-inner">
+				<!-- this div is for retweet icon 
+		<div class="t-show-banner">
+		<div class="t-show-banner-inner">
+			<span><i class="fa fa-retweet" aria-hidden="true"></i></span><span>Screen-Name Retweeted</span>
+		</div>
+	</div>
+	-->
+	<div class="t-show-popup" data-post= "'.$post->tweetID.'" >
+		<div class="t-show-head">
+			<div class="t-show-img">
+				<img src="'.BASE_URL.$post->profileImage.'"/>
+			</div>
+			<div class="t-s-head-content">
+				<div class="t-h-c-name">
+					<span><a href="'.$post->username.'">'.$post->screenName.'</a></span>
+					<span>@'.$post->username.'</span>
+					<span>'.$getFromU->timeAgo($post->postedOn).'</span>
+				</div>
+				<div class="t-h-c-dis">
+					'.$getFromT->getPostLinks($post->status).'
+				</div>
+			</div>
+		</div>';
+		if(!empty($post->tweetImage)){
+		echo'<!--tweet show head end-->
+		 <div class="t-show-body">
+		   <div class="t-s-b-inner">
+		    <div class="t-s-b-inner-in">
+		     <img src="'.BASE_URL.$post->tweetImage.'" class="imagePopup"/>
+		   </div>
+		  </div>
+		</div>
+		<!--tweet show body end-->';
+	}
+	echo '</div>
+	<div class="t-show-footer">
+		<div class="t-s-f-right">
+			<ul> 
+				<li><button><a href="#"><i class="<!--fa fa-reply-->" aria-hidden="true"></i></a></button></li>	
+				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
+				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
+					<li>
+					<a href="#" class="more"><i class="<!--fa fa-trash-->" aria-hidden="true"></i></a>
+					<ul> 
+					  <li><label class="deletePost">Delete Post</label></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>';
+   	}
+	 ?>
 	<!--Tweet SHOW WRAPER END-->
 	</div><!-- in left wrap-->
   <div class="popupTweet"></div>

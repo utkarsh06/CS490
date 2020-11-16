@@ -90,7 +90,7 @@
 					</div>
 				</div>
 				</li>
-				<li><label for="pop-up-tweet" class="addTweetBtn">Post</label></li>
+				<!--<li><label for="pop-up-tweet" class="addTweetBtn">Post</label></li> -->
 			</ul>
 		</div>
 		<!-- nav right ends-->
@@ -343,6 +343,67 @@
 <div class="in-center">
 	<div class="in-center-wrap">	
 		<!-- HERE WILL BE TWEETS -->
+		<?php 
+			$posts = $getFromT->getUserPosts($user_id);
+			foreach($posts as $post){
+   		echo '<div class="all-tweet">
+			<div class="t-show-wrap">	
+ 				<div class="t-show-inner">
+				<!-- this div is for retweet icon 
+		<div class="t-show-banner">
+		<div class="t-show-banner-inner">
+			<span><i class="fa fa-retweet" aria-hidden="true"></i></span><span>Screen-Name Retweeted</span>
+		</div>
+	</div>
+	-->
+	<div class="t-show-popup" data-post= "'.$post->tweetID.'" >
+		<div class="t-show-head">
+			<div class="t-show-img">
+				<img src="'.BASE_URL.$post->profileImage.'"/>
+			</div>
+			<div class="t-s-head-content">
+				<div class="t-h-c-name">
+					<span><a href="'.$post->username.'">'.$post->screenName.'</a></span>
+					<span>@'.$post->username.'</span>
+					<span>'.$getFromU->timeAgo($post->postedOn).'</span>
+				</div>
+				<div class="t-h-c-dis">
+					'.$getFromT->getPostLinks($post->status).'
+				</div>
+			</div>
+		</div>';
+		if(!empty($post->tweetImage)){
+		echo'<!--tweet show head end-->
+		 <div class="t-show-body">
+		   <div class="t-s-b-inner">
+		    <div class="t-s-b-inner-in">
+		     <img src="'.BASE_URL.$post->tweetImage.'" class="imagePopup"/>
+		   </div>
+		  </div>
+		</div>
+		<!--tweet show body end-->';
+	}
+	echo '</div>
+	<div class="t-show-footer">
+		<div class="t-s-f-right">
+			<ul> 
+				<li><button><a href="#"><i class="<!--fa fa-reply-->" aria-hidden="true"></i></a></button></li>	
+				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
+				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
+					<li>
+					<a href="#" class="more"><i class="<!--fa fa-trash-->" aria-hidden="true"></i></a>
+					<ul> 
+					  <li><label class="deletePost">Delete Post</label></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>';
+   	}
+		?>
 	</div>
 	<!-- in left wrap-->
    <div class="popupTweet"></div>

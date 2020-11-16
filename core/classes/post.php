@@ -68,6 +68,21 @@
 </div>';
    	}
    }
+ 
+  public function getMessageFrom($messageFrom){
+  	$stmt = $this->pdo->prepare("SELECT `username` FROM `users` WHERE `user_id` = :messageFrom "); 
+  	$stmt->bindParam(":messageFrom", $messageFrom, PDO::PARAM_INT);
+  	$stmt->execute();
+  	return $stmt->fetchAll(PDO::FETCH_OBJ);
+  }
+
+
+   public function getUserPosts($user_id){
+   	$stmt = $this->pdo->prepare("SELECT * FROM `tweets` LEFT JOIN `users` ON `tweetBy` = `user_id` WHERE `tweetBy` = :user_id ");
+   	$stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+   	$stmt->execute(); 
+    return $stmt->fetchAll(PDO::FETCH_OBJ);
+   }
 
    public function comments($tweet_id){
   	$stmt = $this->pdo->prepare("SELECT * FROM `comments` LEFT JOIN `users` ON `commentBy` = `user_id` WHERE `commentOn` = :tweet_id");

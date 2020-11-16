@@ -12,7 +12,7 @@
   		$comments = $getFromT->comments($tweetID);
   		$post     = $getFromT->getPopupPost($tweetID);
 
-  		foreach ($comments as $comment) {
+  		foreach($comments as $comment) {
 				echo '<div class="tweet-show-popup-comment-box">
 <div class="tweet-show-popup-comment-inner">
 	<div class="tweet-show-popup-comment-head">

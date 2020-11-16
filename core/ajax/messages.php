@@ -14,9 +14,7 @@
   	if(!empty($message)){
   		$getFromU->create('messages', array('messageTo' => $get_id,'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
 
-  		//$getFromU->create('messages', array('messageTo' => $user_id,'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
-
-  		$getFromU->create('messages', array('messageTo' => $user_id, 'messageFrom' => $user_id));
+  		$getFromU->create('messages', array('messageTo' => $user_id and $get_id, 'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s'))); 
   	}
   }
 
@@ -30,8 +28,10 @@
 
   if(isset($_POST['showMessage']) && !empty($_POST['showMessage'])){
   	$user_id  = $_SESSION['user_id'];
+  	$messageFrom = $_POST['showMessage'];
   	$messages = $getFromM->recentMessages($user_id);
   	$user     = $getFromU->userData($user_id);
+    $tee      = $getFromT->getMessageFrom($messageFrom);
   	?>
   	<div class="popup-message-wrap">
 		<input id="popup-message-tweet" type="checkbox" checked="unchecked"/>
