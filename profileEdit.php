@@ -114,7 +114,7 @@
 					<i class="fa fa-camera" aria-hidden="true"></i>
 				</label>
 				<span class="span-text1">
-					Change your profile photo
+					Change profile photo
 				</span>
 				<input id="cover-upload-btn" type="checkbox"/>
 				<div class="img-upload-menu1">
@@ -262,7 +262,7 @@
 				</div>
 				<div class="profile-bio-wrap">
 					<div class="profile-bio-inner">
-						<textarea class="status" name="bio"><?php echo $user->bio; ?></textarea>
+						<textarea class="status" name="bio" placeholder="Bio"><?php echo $user->bio; ?></textarea>
 						<div class="hash-box">
 					 		<ul>
 					 		</ul>
@@ -306,10 +306,10 @@
 							<ul>
 								<li>
 									<div class="profile-ex-location-i">
-										<i class="fa fa-camera" aria-hidden="true"></i>
+										<i class="" aria-hidden="true"></i>
 									</div>
 									<div class="profile-ex-location">
-										<a href="#">0 Photos </a>
+										<a href="home.php">Return To Home Page </a>
 									</div>
 								</li>
 							</ul>

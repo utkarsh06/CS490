@@ -14,7 +14,7 @@
 			<div class="wrap4">
 				<label for="tweet-show-popup-wrap">
 					<div class="tweet-show-popup-box-cut">
-						<i class="fa fa-times" aria-hidden="true"></i>
+						<i class="fa fa-times-circle" aria-hidden="true"></i>
 					</div>
 				</label>
 			<div class="tweet-show-popup-box">
@@ -26,13 +26,13 @@
 				</div>
 				<div class="tweet-show-popup-name">
 					<div class="t-s-p-n">
-						<a href="<?php echo BASE_URL.$post->username; ?>">
-							<?php echo $user->screenName; ?>
+						<a href="<?php echo BASE_URL.$post[0]->username; ?>">
+							<?php echo $post[0]->screenName; ?>
 						</a>
 					</div>
 					<div class="t-s-p-n-b">
-						<a href="<?php echo BASE_URL.$post->username;?>">
-							@<?php echo $user->username; ?>
+						<a href="<?php echo BASE_URL.$post[0]->username;?>">
+							@<?php echo $post[0]->username; ?>
 						</a>
 					</div>
 				</div>
@@ -106,7 +106,8 @@
 				<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 			</div>
 			<div class="tweet-show-popup-footer-input-right">
-				<input id="commentField" type="text" data-post="<?php echo $post->tweetID;?>" name="comment"  placeholder="Reply to @<?php echo $user->username; ?>">
+				<input id="commentField" type="text" data-post="<?php echo $post->tweetID;?>" name="comment"  placeholder="Reply to User:">
+				<!-- <?php echo $user->username; ?> -->
 			</div>
 		</div>
 		<div class="tweet-footer">
@@ -122,7 +123,9 @@
 		 	</div>
 		 	<div class="t-fo-right">
  		 		<input type="submit" id="postComment" value= "Submit">
+ 		 		
  		 		<script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/comment.js"></script>
+
 		 	</div>
 		 </div>
 	</div><!--tweet-show-popup-footer-input-wrap end-->
@@ -149,19 +152,12 @@
 			 	</div>
 			 </div>
 			 <div class="tweet-show-popup-comment-right-tweet">
-			 	 <p><a href="'.BASE_URL.$user->username.'">@'.$user->username.'</a> '.$comment->comment.'</p>
+			 	 <p><a href="'.BASE_URL.$comment->username.'">@'.$comment->username.'</a> '.$comment->comment.'</p>
 			 </div>
 		 	<div class="tweet-show-popup-footer-menu">
-				<ul>
-					<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>
-					<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-					<li>
-					<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-					<ul> 
-					  <li><label class="deleteTweet">Delete Tweet</label></li>
-					</ul>
-					</li>
-				</ul>
+			
+
+
 			</div>
 		</div>
 	</div>

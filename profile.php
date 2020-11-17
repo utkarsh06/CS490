@@ -204,10 +204,10 @@
 			<ul>
 				<li>
 					<div class="profile-ex-location-i">
-						<i class="fa fa-camera" aria-hidden="true"></i>
+						<i class="" aria-hidden="true"></i>
 					</div>
 					<div class="profile-ex-location">
-						<a href="#">0 Photos </a>
+						<a href="profileEdit.php"> Edit My Profile </a>
 					</div>
 				</li>
 			</ul>

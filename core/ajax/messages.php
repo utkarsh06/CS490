@@ -31,7 +31,9 @@
   	$messageFrom = $_POST['showMessage'];
   	$messages = $getFromM->recentMessages($user_id);
   	$user     = $getFromU->userData($user_id);
-    $tee      = $getFromT->getMessageFrom($messageFrom);
+    //$tee      = $getFromT->getMessageFrom($messageFrom);
+    //$search  = $getFromU->checkInput($_POST['search']);
+    //$result  = $getFromU->search($search);
   	?>
   	<div class="popup-message-wrap">
 		<input id="popup-message-tweet" type="checkbox" checked="unchecked"/>
@@ -57,7 +59,9 @@
 	</div>
 	<div class="message-body">
 		<h4>Recent</h4>
+		
 		<div class="message-recent">
+		<!-- <?php echo print_r($messages); ?> -->
 		<?php foreach ($messages as $message) :?>
 			<!--Direct Messages-->		
 			<div class="people-message" data-user="<?php echo $message->user_id; ?>">
@@ -107,7 +111,7 @@
 							<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 						</div>
 						<div class="name-right2">
-							<span><a href="#"><?php echo $user->screenName;?></a></span><span>@<?php echo $user->username;?></span>
+							<span><a href="#"><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
 						</div>
 						<div class="msg-box">
 							<?php echo $message->message;  ?>

@@ -35,9 +35,9 @@
 			 </div>
 		 	<div class="tweet-show-popup-footer-menu">
 				<ul>
-					 <li><button><i class="" aria-hidden="true"></i></button></li>
+					  <li><button><i class="" aria-hidden="true"></i></button></li>
 					<li><a href="#"><i class="" aria-hidden="true"></i></a></li>
-					<li>
+					<li> 
 					<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
 					<ul> 
 					  <li><label class="deleteTweet">Delete Tweet</label></li> 
