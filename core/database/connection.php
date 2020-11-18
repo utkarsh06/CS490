@@ -11,8 +11,8 @@
    $pass = '';
 
    try{
-   	   $pdo = new PDO($dsn, $username, $password);
-        // $pdo = new PDO($dsn, $user, $pass);
+   	   $pdo = new PDO($dsn, $username, $password); //for heroku
+         //$pdo = new PDO($dsn, $user, $pass);  //for local
    } catch(PDOException $e){
    		echo 'Connection error! ' . $e->getMessage();
    }

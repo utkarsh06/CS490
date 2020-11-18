@@ -32,8 +32,7 @@
   	$messages = $getFromM->recentMessages($user_id);
   	$user     = $getFromU->userData($user_id);
     //$tee      = $getFromT->getMessageFrom($messageFrom);
-    //$search  = $getFromU->checkInput($_POST['search']);
-    //$result  = $getFromU->search($search);
+    
   	?>
   	<div class="popup-message-wrap">
 		<input id="popup-message-tweet" type="checkbox" checked="unchecked"/>
@@ -111,7 +110,7 @@
 							<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 						</div>
 						<div class="name-right2">
-							<span><a href="#"><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
+							<span><a href="#"><?php echo $user->screenName;?></a></span><span>@<?php echo $user->username;?></span>
 						</div>
 						<div class="msg-box">
 							<?php echo $message->message;  ?>

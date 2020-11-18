@@ -31,7 +31,7 @@
 			 	</div>
 			 </div>
 			 <div class="tweet-show-popup-comment-right-tweet">
-			 		<p><a href="'.BASE_URL.$user->username.'">@'.$user->username.'</a> '.$comment->comment.'</p>
+			 		<p><a href="'.BASE_URL.$post[0]->username.'">@'.$post[0]->username.'</a> '.$comment->comment.'</p>
 			 </div>
 		 	<div class="tweet-show-popup-footer-menu">
 				<ul>
@@ -49,7 +49,7 @@
 	</div>
 </div>
 <!--TWEET SHOW POPUP COMMENT inner END-->
-</div>';
+</div>'; 
 		}
   	}
   }

@@ -78,7 +78,7 @@ $(function(){
 	  	});
 
 	  	$(document).on('click', '.delete', function(){
-	  	 // $.post('http://localhost/twitterclone/core/ajax/messages.php', {deleteMsg:messageID}, function(data){
+	  	  //$.post('http://localhost/twitterclone/core/ajax/messages.php', {deleteMsg:messageID}, function(data){
 	  	$.post('https://calm-ocean-67152.herokuapp.com/core/ajax/messages.php', {deleteMsg:messageID}, function(data){
 	  	  	$('.message-del-inner').height('0px');
 	  	  	getMessages();

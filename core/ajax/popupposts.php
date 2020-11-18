@@ -43,11 +43,11 @@
 		</div>
 		<div class="tweet-show-popup-tweet-wrap">
 			<div class="tweet-show-popup-tweet">
-			<!-- <?php echo $getFromT->getPostLinks($post->status); ?>   --> Comment on this post below..
+			 <?php echo $getFromT->getPostLinks($post[0]->status); ?>  
 			</div>
 			 <div class="tweet-show-popup-tweet-ifram">
-			<?php if(!empty($post->tweetImage)){ ?>
-  			    <img src="<?php echo BASE_URL.$post->tweetImage; ?>"/> 
+			<?php if(!empty($post[0]->tweetImage)){ ?>
+  			    <img src="<?php echo BASE_URL.$post[0]->tweetImage; ?>"/> 
   			<?php }?>
 			</div>
 		</div>
@@ -106,7 +106,7 @@
 				<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 			</div>
 			<div class="tweet-show-popup-footer-input-right">
-				<input id="commentField" type="text" data-post="<?php echo $post->tweetID;?>" name="comment"  placeholder="Comment on post">
+				<input id="commentField" type="text" data-post="<?php echo $post[0]->tweetID;?>" name="comment"  placeholder="Comment on post">
 				<!-- <?php echo $user->username; ?> -->
 			</div>
 		</div>
@@ -122,7 +122,7 @@
 		 		</ul>
 		 	</div>
 		 	<div class="t-fo-right">
- 		 		<input type="submit" id="postComment" value= "Submit">
+ 		 		<input type="submit" id="postComment" value= "Send">
  		 		
  		 		<script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/comment.js"></script>
 
@@ -152,7 +152,7 @@
 			 	</div>
 			 </div>
 			 <div class="tweet-show-popup-comment-right-tweet">
-			 	 <p><a href="'.BASE_URL.$comment->username.'">@'.$comment->username.'</a> '.$comment->comment.'</p>
+			 	 <p><a href="'.BASE_URL.$post[0]->username.'">@'.$post[0]->username.'</a> '.$comment->comment.'</p>
 			 </div>
 		 	<div class="tweet-show-popup-footer-menu">
 			
