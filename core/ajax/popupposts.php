@@ -106,7 +106,7 @@
 				<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 			</div>
 			<div class="tweet-show-popup-footer-input-right">
-				<input id="commentField" type="text" data-post="<?php echo $post->tweetID;?>" name="comment"  placeholder="Reply to User:">
+				<input id="commentField" type="text" data-post="<?php echo $post->tweetID;?>" name="comment"  placeholder="Comment on post">
 				<!-- <?php echo $user->username; ?> -->
 			</div>
 		</div>

@@ -4,7 +4,7 @@
   	$user_id = $_SESSION['user_id'];
   	$search  = $getFromU->checkInput($_POST['search']);
   	$result  = $getFromU->search($search);
-  	//$user    = $getFromU->userData($user_id);
+  	
   	echo'<h4>People</h4><div class="message-recent">';
   	foreach ($result as $user) {
   		if($user->user_id != $user_id){
