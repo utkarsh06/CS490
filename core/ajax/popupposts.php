@@ -22,7 +22,7 @@
 					<div class="tweet-show-popup-head">
 			<div class="tweet-show-popup-head-left">
 				<div class="tweet-show-popup-img">
-					<img src="<?php echo BASE_URL.$user->profileImage; ?>"/>
+					<img src="<?php echo BASE_URL.$post[0]->profileImage; ?>"/>
 				</div>
 				<div class="tweet-show-popup-name">
 					<div class="t-s-p-n">
@@ -76,7 +76,7 @@
 				</div>
 			</div>
 			<div class="tweet-show-popup-time">
-				<!--<span><?php echo $post->postedOn; ?></span>-->
+				<span><?php echo $post[0]->postedOn; ?></span>
 			</div>
 			<div class="tweet-show-popup-footer-menu">
 				<ul>
