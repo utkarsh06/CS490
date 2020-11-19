@@ -10,8 +10,9 @@
    	$posts = $stmt->fetchAll(PDO::FETCH_OBJ);
 
    	foreach($posts as $post){
-   		echo '<div <div style="background-image: url(assets/images/defaultCoverImage.png);" class="all-tweet">
-<divstyle="background-image: url(assets/images/defaultCoverImage.png);" class="t-show-wrap">	
+   		echo '<div style="background-image: url(assets/images/defaultCoverImage.png);" class="all-tweet">
+
+<div style="background-image: url(assets/images/defaultCoverImage.png);" class="t-show-wrap">	
  <div class="t-show-inner">
 	<!-- this div is for retweet icon 
 	<div class="t-show-banner">
