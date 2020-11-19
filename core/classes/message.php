@@ -27,7 +27,7 @@
     	$messages = $stmt->fetchAll(PDO::FETCH_OBJ);
     	$messagee = $this->recentMessages($user_id);
     	$user     = $this->userData($user_id);
-    	foreach ($messagee as $message) {
+    	foreach ($messages as $message) {
     		if($message->messageFrom === $user_id){
     			echo '<!-- Main message BODY RIGHT START -->
 		<div class="main-msg-body-right">

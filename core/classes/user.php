@@ -7,9 +7,9 @@
    }
 
    public function checkInput($var){
-   	$var = htmlspecialchars($var);
+   /*	$var = htmlspecialchars($var);
    	$var = trim($var);
-   	$var = stripcslashes($var);
+   	$var = stripcslashes($var); */
    	return $var;
    }
 
@@ -105,7 +105,6 @@
    	$stmt = $this->pdo->prepare("SELECT `username` FROM `users` WHERE `username` = :username");
    	$stmt->bindParam(":username", $username, PDO::PARAM_STR);
    	$stmt -> execute();
-
    	$count = $stmt->rowCount();
    	if($count > 0){
    		return true;

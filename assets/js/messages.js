@@ -52,7 +52,7 @@ $(function(){
 		   });
 	   }
 
-	   var timer = setInterval(getMessages, 5000);
+	   var timer = setInterval(getMessages, 2000);
 	   getMessages();
 
 	   autoscroll = true;

@@ -11,12 +11,12 @@
   	$user_id = $_SESSION['user_id'];
   	$message = $getFromU->checkInput($_POST['sendMessage']);
   	$get_id  = $_POST['get_id'];
-  	if(!empty($message)){
+   	if(!empty($message)){
+  		
   		$getFromU->create('messages', array('messageTo' => $get_id,'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s')));
 
-  		$getFromU->create('messages', array('messageTo' => $user_id and $get_id, 'messageFrom' => $user_id, 'message' => $message, 'messageOn' => date('Y-m-d H:i:s'))); 
   	}
-  }
+ }
 
   if(isset($_POST['showChatMessage']) && !empty($_POST['showChatMessage'])){
   	$user_id  = $_SESSION['user_id'];
@@ -29,7 +29,7 @@
   if(isset($_POST['showMessage']) && !empty($_POST['showMessage'])){
   	$user_id  = $_SESSION['user_id'];
   	$messageFrom = $_POST['showMessage'];
-  	$messages = $getFromM->recentMessages($user_id);
+  	$messages = $getFromM->recentMessages($user_id); //recentMessages
   	$user     = $getFromU->userData($user_id);
     //$tee      = $getFromT->getMessageFrom($messageFrom);
     
@@ -69,7 +69,7 @@
 						<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 					</div>
 					<div class="name-right2">
-						<span><a href="#"><?php echo $user->screenName;?></a></span><span>@<?php echo $user->username;?></span>
+						<span><a href="#"><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
 					</div>
 					
 					<span>
@@ -104,13 +104,13 @@
 			<div class="back-body">
 			<?php foreach($messages as $message) :?>
 			<!--Direct Messages-->
-				<div class="people-message" data-user="<?php echo $user->user_id; ?>">
+				<div class="people-message" data-user="<?php echo $message->user_id; ?>">
 					<div class="people-inner">
 						<div class="people-img">
 							<img src="<?php echo BASE_URL.$user->profileImage;?>"/>
 						</div>
 						<div class="name-right2">
-							<span><a href="#"><?php echo $user->screenName;?></a></span><span>@<?php echo $user->username;?></span>
+							<span><a href="#"><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
 						</div>
 						<div class="msg-box">
 							<?php echo $message->message;  ?>
