@@ -57,7 +57,7 @@
 		</ul>
 	</div>
 	<div style="background-image: url(assets/images/defaultCoverImage.png); " class="message-body">
-		<h4>Recent</h4>
+		<h4 style= "color:white;"> Recent</h4>
 		
 		<div class="message-recent">
 		<!-- <?php echo print_r($messages); ?> -->
