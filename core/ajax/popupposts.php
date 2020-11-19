@@ -85,9 +85,9 @@
 				 		}else{
 
 				 	?>
-					<li><button type="buttton"><i class="fa fa-share" aria-hidden="true"></i></button></li>
-					<li><button type="button"><i class="fa fa-retweet" aria-hidden="true"></i><span class="retweetsCount">RETWEET-COUNT</span></button></li>
-					<li><button type="button"><i class="fa fa-heart" aria-hidden="true"></i><span class="likesCount">LIKES-COUNT</span></button></button></li>
+					<li><button type="buttton"><i class="   " aria-hidden="true"></i></button></li>
+					<li><button type="button"><i class="   " aria-hidden="true"></i><span class="retweetsCount">    </span></button></li>
+					<li><button type="button"><i class="  " aria-hidden="true"></i><span class="likesCount">   </span></button></button></li>
 					<!--<li>
 					<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
 						<ul> 
