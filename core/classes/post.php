@@ -10,8 +10,8 @@
    	$posts = $stmt->fetchAll(PDO::FETCH_OBJ);
 
    	foreach($posts as $post){
-   		echo '<div class="all-tweet">
-<div class="t-show-wrap">	
+   		echo '<div <div style="background-image: url(assets/images/defaultCoverImage.png);" class="all-tweet">
+<divstyle="background-image: url(assets/images/defaultCoverImage.png);" class="t-show-wrap">	
  <div class="t-show-inner">
 	<!-- this div is for retweet icon 
 	<div class="t-show-banner">
@@ -27,11 +27,11 @@
 			</div>
 			<div class="t-s-head-content">
 				<div class="t-h-c-name">
-					<span><a href="'.$post->username.'">'.$post->screenName.'</a></span>
-					<span>@'.$post->username.'</span>
-					<span>'.$this->timeAgo($post->postedOn).'</span>
+					<span><a style = "color: white;" href="'.$post->username.'">'.$post->screenName.'</a></span>
+					<span style = "color: white;">@'.$post->username.'</span>
+					<span style = "color: white;">'.$this->timeAgo($post->postedOn).'</span>
 				</div>
-				<div class="t-h-c-dis">
+				<div style = "color: white;" class="t-h-c-dis">
 					'.$this->getPostLinks($post->status).'
 				</div>
 			</div>

@@ -56,7 +56,7 @@
 				
 		</ul>
 	</div>
-	<div class="message-body">
+	<div style="background-image: url(assets/images/defaultCoverImage.png); " class="message-body">
 		<h4>Recent</h4>
 		
 		<div class="message-recent">
@@ -174,7 +174,7 @@
 		</div>
 	</div>
 	<div class="main-msg-wrap">
-      <div id="chat" class="main-msg-inner">
+      <div style="background-image: url(assets/images/defaultCoverImage.png); "  id="chat" class="main-msg-inner">
      
  	  </div>
 	</div>
