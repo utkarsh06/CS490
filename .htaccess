@@ -1,3 +1,5 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([a-zA-Z0-9_-]+)/?$ profile.php?username=$1 [QSA]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/(following|followers)?$ $2.php?username=$1

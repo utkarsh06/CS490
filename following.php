@@ -12,9 +12,6 @@
 		}
 	}
 ?>
-
-
-
 <!doctype html>
 <html>
 	<head>
@@ -218,6 +215,9 @@
 			 <!-- <li><img src="#"/></li> -->
 		</ul>		
 	</div>
+	<!-- whoToFollow -->
+
+	<!--trends-->
 </div>
 
 	 </div>
@@ -226,113 +226,22 @@
 	</div>
 	<!--PROFILE INFO WRAPPER END-->
 
+		<div class="popupTweet"></div>
+		</div>
+		<!-- in left wrap-->
 	</div>
-	<!-- in left wrap-->
-	<div class="popupPost"></div>
-	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/messages.js"></script>
-
-	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/search.js"></script>
-
-	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/popupposts.js"></script>
-	
-	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/comment.js"></script>
-
-	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/postMessage.js"></script>
-
-	<script type="text/javascript" src="<?php echo BASE_URL ;?>assets/js/follow.js"></script>
-  </div>
 	<!-- in left end-->
+		<!--FOLLOWING OR FOLLOWER FULL WRAPPER-->
+		<div class="wrapper-following">
+			<div class="wrap-follow-inner">
+              <?php $getFromF->followingList($profileId, $user_id);  ?>
+			</div><!-- wrap follo inner end-->
+		</div><!--FOLLOWING OR FOLLOWER FULL WRAPPER END-->
+		<script type="text/javascript" src="<?php echo BASE_URL;?>/assets/js/follow.js"></script>
+	</div><!--in full wrap end-->
+</div>
+<!-- in wrappper ends-->
 
-<div class="in-center">
-	<div class="in-center-wrap">
-	<!--Tweet SHOW WRAPER-->
-	<?php
-		$posts = $getFromT->getUserPosts($profileId);
-		foreach($posts as $post){
-   		echo '<div class="all-tweet">
-			<div class="t-show-wrap">	
- 				<div class="t-show-inner">
-				<!-- this div is for retweet icon 
-		<div class="t-show-banner">
-		<div class="t-show-banner-inner">
-			<span><i class="fa fa-retweet" aria-hidden="true"></i></span><span>Screen-Name Retweeted</span>
-		</div>
-	</div>
-	-->
-	<div class="t-show-popup" data-post= "'.$post->tweetID.'" >
-		<div class="t-show-head">
-			<div class="t-show-img">
-				<img src="'.BASE_URL.$post->profileImage.'"/>
-			</div>
-			<div class="t-s-head-content">
-				<div class="t-h-c-name">
-					<span><a href="'.$post->username.'">'.$post->screenName.'</a></span>
-					<span>@'.$post->username.'</span>
-					<span>'.$getFromU->timeAgo($post->postedOn).'</span>
-				</div>
-				<div class="t-h-c-dis">
-					'.$getFromT->getPostLinks($post->status).'
-				</div>
-			</div>
-		</div>';
-		if(!empty($post->tweetImage)){
-		echo'<!--tweet show head end-->
-		 <div class="t-show-body">
-		   <div class="t-s-b-inner">
-		    <div class="t-s-b-inner-in">
-		     <img src="'.BASE_URL.$post->tweetImage.'" class="imagePopup"/>
-		   </div>
-		  </div>
-		</div>
-		<!--tweet show body end-->';
-	}
-	echo '</div>
-	<div class="t-show-footer">
-		<div class="t-s-f-right">
-			<ul> 
-				<li><button><a href="#"><i class="<!--fa fa-reply-->" aria-hidden="true"></i></a></button></li>	
-				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
-				<li><button><a href="#"><i class="" aria-hidden="true"></i></a></button></li>
-					<li>
-					<a href="#" class="more"><i class="<!--fa fa-trash-->" aria-hidden="true"></i></a>
-					<ul> 
-					  <li><label class="deletePost">Delete Post</label></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-</div>
-</div>';
-   	}
-	 ?>
-	<!--Tweet SHOW WRAPER END-->
-	</div><!-- in left wrap-->
-  <div class="popupTweet"></div>
-</div>
-<!-- in center end -->
-
-<div class="in-right">
-	<div class="in-right-wrap">
-			
-		<!--==WHO TO FOLLOW==-->
-	      <!--who to follow-->
-		<!--==WHO TO FOLLOW==-->
-			
-		<!--==TRENDS==-->
-	 	   <!--Trends-->
-	 	<!--==TRENDS==-->
-			
-	</div><!-- in right wrap-->
-</div>
-<!-- in right end -->
-
-		</div>
-		<!--in full wrap end-->
-	</div>
-	<!-- in wrappper ends-->	
- </div>
- <!-- ends wrapper -->
+</div><!-- ends wrapper -->
 </body>
 </html>
