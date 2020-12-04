@@ -214,7 +214,7 @@
 		</div><!-- in center end -->
 
 		<div class="in-right">
-			<div style = "position:relative; left:5px; top:-1700px; class="in-right-wrap">
+			<div style = "position:relative; left:5px; top:-1600px; class="in-right-wrap">
 			
 		 	<!--Who To Follow-->
 		      <?php $getFromF->whoToFollow($user_id, $user_id); ?>
