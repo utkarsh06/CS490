@@ -142,7 +142,7 @@
 
 		<div class="profile-name-wrap">
 			<div class="profile-name">
-				<a href="<?php echo BASE_URL.$profileData->profileCover;?>"><?php echo $profileData->screenName;?></a>
+				<a href="home.php"><?php echo $profileData->screenName;?></a>
 			</div>
 			<div class="profile-tname">
 				@<span class="username"><?php echo $profileData->username;?></span>

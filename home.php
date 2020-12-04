@@ -5,6 +5,9 @@
  if($getFromU->loggedIn() === false){
  	header('Location: index.php');
  }
+
+ //$getFromU->delete('comments', array('commentID' => '1'));
+
  if(isset($_POST['post'])){
  	$status = $getFromU->checkInput($_POST['status']);
  	$tweetImage = '';
@@ -188,7 +191,7 @@
 
 			
 				<!--Post SHOW WRAPPER-->
-				 <div class="posts">
+				 <div style = "position:relative; left:-10px; top:30px; class="posts">
  				  	<?php $getFromT->posts(); ?>
  				 </div>
  				<!--Post SHOW WRAPPER-->
@@ -211,16 +214,16 @@
 		</div><!-- in center end -->
 
 		<div class="in-right">
-			<div class="in-right-wrap">
-
+			<div style = "position:relative; left:5px; top:-950px; class="in-right-wrap">
+			
 		 	<!--Who To Follow-->
-		      <!--WHO_TO_FOLLOW HERE-->
+		      <?php $getFromF->whoToFollow($user_id, $user_id); ?>
       		<!--Who To Follow-->
 
  			</div><!-- in left wrap-->
 
 		</div><!-- in right end -->
-
+	<script type="text/javascript" src="assets/js/follow.js"></script>
 	</div><!--in full wrap end-->
 
 </div><!-- in wrappper ends-->

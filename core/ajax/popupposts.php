@@ -14,7 +14,7 @@
 			<div class="wrap4">
 				<label for="tweet-show-popup-wrap">
 					<div class="tweet-show-popup-box-cut">
-						<i class="fa fa-times-circle" aria-hidden="true"></i>
+						<i class="fa fa-times-circle" style="color:black" aria-hidden="true"></i>
 					</div>
 				</label>
 			<div class="tweet-show-popup-box">
