@@ -139,7 +139,7 @@
      }
 
      public function whoToFollow($user_id, $profileID){
-     	$stmt = $this->pdo->prepare("SELECT * FROM `users` WHERE `user_id` != :user_id AND `user_id` NOT IN (SELECT `receiver` FROM `follow` WHERE `sender` = :user_id) ORDER BY rand() LIMIT 3");
+     	$stmt = $this->pdo->prepare("SELECT * FROM `users` WHERE `user_id` != :user_id AND `user_id` NOT IN (SELECT `receiver` FROM `follow` WHERE `sender` = :user_id) ORDER BY rand() LIMIT 6");
      	$stmt->bindParam("user_id", $user_id, PDO::PARAM_INT);
      	$stmt->execute();
      	$data = $stmt->fetchAll(PDO::FETCH_OBJ);
