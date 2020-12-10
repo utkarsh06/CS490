@@ -123,7 +123,7 @@
 							<div class="num-body">
 								10
 							</div>
-						</div>
+						</div> -->
 						<div class="num-box">
 							<div class="num-head">
 								FOLLOWING
@@ -137,7 +137,7 @@
 								FOLLOWERS
 							</div>
 							<div class="num-body">
-								<span class="count-followers"><?php echo $user->followers;?></span> -->
+								<span class="count-followers"><?php echo $user->followers;?></span> 
 							</div>
 						</div>	
 					</div><!-- mumber wrapper-->
