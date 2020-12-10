@@ -31,7 +31,7 @@
 	<head>
 		<title>Buzz</title>
 		  <meta charset="UTF-8" />
-		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>  
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/> 
 		  <script src="https://kit.fontawesome.com/5cefab2e22.js" crossorigin="anonymous"></script>
  	  	  <link rel="stylesheet" href="assets/css/style-complete.css"/> 
    		  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>  	  
@@ -51,6 +51,7 @@
 				<li><a href="home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 				<!--<li><a href="i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li> -->
 				<li id= "messagePopup"><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li>
+				<li> <a href = "snakeGame.php"><i class="fas fa-chess"></i> Game Center</a> </li>
 			</ul>
 		</div><!-- nav left ends-->
 
@@ -93,62 +94,10 @@
 <div class="in-wrapper">
 	<div class="in-full-wrap">
 		<div class="in-left">
-			<div class="in-left-wrap">
-		<div class="info-box">
-			<div class="info-inner">
-				<div class="info-in-head">
-					<!-- PROFILE-COVER-IMAGE -->
-					<img src="<?php echo $user->profileCover;?>"/>
-				</div><!-- info in head end -->
-				<div class="info-in-body">
-					<div class="in-b-box">
-						<div class="in-b-img">
-						<!-- PROFILE-IMAGE -->
-							<img src="<?php echo $user->profileImage;?>"/>
-						</div>
-					</div><!--  in b box end-->
-					<div class="info-body-name">
-						<div class="in-b-name">
-							<div><a href="<?php echo $user->username;?>"><?php echo $user->screenName;?></a></div>
-							<span><small><a href="<?php echo $user->username;?>"><?php echo $user->username;?></a></small></span>
-						</div><!-- in b name end-->
-					</div><!-- info body name end-->
-				</div><!-- info in body end-->
-				<div class="info-in-footer">
-					<div class="number-wrapper">
-						<div class="num-box">
-							<!--Posts, Following , Followers-->
-							<!--<div class="num-head">
-								POSTS
-							</div>
-							<div class="num-body">
-								10
-							</div>
-						</div>
-						<div class="num-box">
-							<div class="num-head">
-								FOLLOWING
-							</div>
-							<div class="num-body">
-								<span class="count-following"><?php echo $user->following;?></span>
-							</div>
-						</div>
-						<div class="num-box">
-							<div class="num-head">
-								FOLLOWERS
-							</div>
-							<div class="num-body">
-								<span class="count-followers"><?php echo $user->followers;?></span> -->
-							</div>
-						</div>	
-					</div><!-- mumber wrapper-->
-				</div><!-- info in footer -->
-			</div><!-- info inner end -->
-		</div><!-- info box end-->
+			
+					
 
-	<!--==TRENDS==-->
- 	  <!---TRENDS HERE-->
- 	<!--==TRENDS==-->
+	
 
 	</div><!-- in left wrap-->
 		</div><!-- in left end-->
@@ -160,47 +109,29 @@
 						 <div class="post-h-left">
 						 	<div class="post-h-img">
 						 	<!-- PROFILE-IMAGE -->
-						 		<img src="<?php echo $user->profileImage;?>"width ="40" height="40"/>
 						 	</div> 
 						 </div>  
-						 <div class="post-body">
-						 <form method="post" enctype="multipart/form-data">
-							<textarea class="status" name="status" placeholder="Type Something here!" rows="4" cols="50"></textarea>
- 						 	<div class="hash-box">
-						 		<ul>
-  						 		</ul>
-						 	</div>
- 						 </div>
-						 <div class="post-footer">
-						 	<div class="t-fo-left">
-						 		<ul>
-						 			<input type="file" name="file" id="file"/>
-			<!-- Camera icon goes here!  -->
-						 			<li><label for="file"><i class="fa fa-camera" aria-hidden="true"></i></label>
-						 			<span class="post-error"><?php if(isset($error)){echo $error;}else if(isset($imageError)){echo $imageError;}?></span>
-						 			</li>
-						 		</ul>
-						 	</div>
-						 	<div class="t-fo-right">
-						 		<span id="count">140</span>
-						 		<input type="submit" name="post" value="post"/>
-				 		</form>
-						 	</div>
+						 <h1> SNAKE GAME </h1>
 						 </div>
 					</div>
 				</div><!--Post WRAP END-->
 
 			
 				<!--Post SHOW WRAPPER-->
-				 <div style = "position:relative; left:-10px; top:30px; class="posts">
- 				  	<?php $getFromT->posts(); ?>
+				 <div style = "position:relative; left:-10px; top:30px;" class="posts">
+ 				  	<div class = "" style = "text-align:center; width: 50%;" >
+						<fieldset >
+							<legend > Snake Game</legend>
+							<div >
+								<canvas id="gameCard" width="400" height="400"></canvas>
+								<script src="assets/js/snakeGame.js"></script>
+							</div>
+						</fieldset>
+					</div>
  				 </div>
  				<!--Post SHOW WRAPPER-->
 
-		    	<div class="loading-div">
-		    		<img id="loader" src="assets/images/loading.svg" style="display: none;"/> 
-		    	</div>
-				<div class="popupPost"></div>
+
 				<!--Tweet END WRAPER-->
 
  			<script type="text/javascript" src="assets/js/popupposts.js"></script>
@@ -214,14 +145,7 @@
 			</div><!-- in left wrap-->
 		</div><!-- in center end -->
 
-		<div class="in-right">
-			<div style = "position:relative; left:5px; top:-1600px; class="in-right-wrap">
-			
-		 	<!--Who To Follow-->
-		      <?php $getFromF->whoToFollow($user_id, $user_id); ?>
-      		<!--Who To Follow-->
-
- 			</div><!-- in left wrap-->
+		
 
 		</div><!-- in right end -->
 	<script type="text/javascript" src="assets/js/follow.js"></script>
