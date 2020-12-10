@@ -174,7 +174,7 @@
 		</div>
 	</div>
 	<div class="main-msg-wrap">
-      <div style="background-color: #b3b3b3 ; "  id="chat" class="main-msg-inner">
+      <div style="background-color: #404040 ; "  id="chat" class="main-msg-inner">
      
  	  </div>
 	</div>
