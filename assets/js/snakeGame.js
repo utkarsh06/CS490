@@ -1,29 +1,29 @@
 window.onload=function() {
-    gameCanvas=document.getElementById("gameCard");
-    ctx=gameCanvas.getContext("2d");
+    canv=document.getElementById("gameCard");
+    ctx=canv.getContext("2d");
     document.addEventListener("keydown",keyPush);
     setInterval(game,1000/15);
 }
-positionX=positionY=10;
+px=py=10;
 gs=tc=20;
 ax=ay=15;
 xv=yv=0;
 trail=[];
 tail = 5;
 function game() {
-    positionX+=xv;
-    positionY+=yv;
-    if(positionX<0) {
-        positionX= tc-1;
+    px+=xv;
+    py+=yv;
+    if(px<0) {
+        px= tc-1;
     }
-    if(positionX>tc-1) {
-        positionX= 0;
+    if(px>tc-1) {
+        px= 0;
     }
-    if(positionY<0) {
-        positionY= tc-1;
+    if(py<0) {
+        py= tc-1;
     }
-    if(positionY>tc-1) {
-        positionY= 0;
+    if(py>tc-1) {
+        py= 0;
     }
     ctx.fillStyle="black";
     ctx.fillRect(0,0,canv.width,canv.height);
@@ -31,16 +31,16 @@ function game() {
     ctx.fillStyle="lime";
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].xgs,trail[i].ygs,gs-2,gs-2);
-        if(trail[i].x==positionX && trail[i].y==positionY) {
+        if(trail[i].x==px && trail[i].y==py) {
             tail = 5;
         }
     }
-    trail.push({x:positionX,y:positionY});
+    trail.push({x:px,y:py});
     while(trail.length>tail) {
     trail.shift();
     }
  
-    if(ax==positionX && ay==positionY) {
+    if(ax==px && ay==py) {
         tail++;
         ax=Math.floor(Math.random()tc);
         ay=Math.floor(Math.random()tc);
