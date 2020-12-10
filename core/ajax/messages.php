@@ -174,7 +174,7 @@
 		</div>
 	</div>
 	<div class="main-msg-wrap">
-      <div style="background-image: url(assets/images/hexsmall.png); "  id="chat" class="main-msg-inner">
+      <div style="background-color: #b3b3b3 ; "  id="chat" class="main-msg-inner">
      
  	  </div>
 	</div>
