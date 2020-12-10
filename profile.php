@@ -207,7 +207,7 @@
 						<i class="" aria-hidden="true"></i>
 					</div>
 					<div class="profile-ex-location">
-						<a href="profileEdit.php"> Edit My Profile </a>
+					<!--	<a href="profileEdit.php"> Edit My Profile </a> -->
 					</div>
 				</li>
 			</ul>
