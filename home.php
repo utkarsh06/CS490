@@ -117,13 +117,13 @@
 					<div class="number-wrapper">
 						<div class="num-box">
 							<!--Posts, Following , Followers-->
-							<div class="num-head">
-								<!-- Posts -->
+							<!--<div class="num-head">
+								POSTS
 							</div>
 							<div class="num-body">
-								<!-- 10 -->
+								10
 							</div>
-						</div> 
+						</div>
 						<div class="num-box">
 							<div class="num-head">
 								FOLLOWING
@@ -137,7 +137,7 @@
 								FOLLOWERS
 							</div>
 							<div class="num-body">
-								<span class="count-followers"><?php echo $user->followers;?></span> 
+								<span class="count-followers"><?php echo $user->followers;?></span> -->
 							</div>
 						</div>	
 					</div><!-- mumber wrapper-->
