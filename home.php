@@ -51,6 +51,7 @@
 				<li><a href="home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 				<!--<li><a href="i/notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a></li> -->
 				<li id= "messagePopup"><i class="fa fa-envelope" aria-hidden="true"></i>Messages</li>
+				<li> <a href = "snakeGame.php"><i class="fas fa-chess"></i> Game Center</a> </li>
 			</ul>
 		</div><!-- nav left ends-->
 
